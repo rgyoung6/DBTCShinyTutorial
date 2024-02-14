@@ -1,6 +1,0 @@
-2024_02_14_0314 Start
-The files being combined with an associated unique identifying number (File_Unique_ID column) used in the uniqueID column of the output file...
-File_Path	File	File_Name	File_Unique_ID
-E:/A_Test_DBTCShiny/S/F-CombineTaxaAssign/2024_02_13_0240_Run1_Merge_T_taxaAssign_2024_02_14_0253.tsv	2024_02_13_0240_Run1_Merge_T_taxaAssign_2024_02_14_0253.tsv	2024_02_13_0240_Run1_Merge_T	1
-E:/A_Test_DBTCShiny/S/F-CombineTaxaAssign/2024_02_13_0243_Run2_Merge_T_taxaAssign_2024_02_14_0253.tsv	2024_02_13_0243_Run2_Merge_T_taxaAssign_2024_02_14_0253.tsv	2024_02_13_0243_Run2_Merge_T	2
-Reading in all of the submitted files at... 2024-02-14 03:14:44

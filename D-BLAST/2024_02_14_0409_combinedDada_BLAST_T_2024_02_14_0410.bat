@@ -1,1 +1,0 @@
-"E:\A_Test_DBTCShiny\blastn.exe" -db T -query "C:\Users\robgy\AppData\Local\Temp\RtmpSglTo7\file1de45a814a35.fas" -max_target_seqs 200 -outfmt "6 qseqid sseqid staxid qcovs pident ssciname scomname qstart qend sstart send evalue" -num_threads 1 -out "E:/A_Test_DBTCShiny/S/D-BLAST/2024_02_14_0409_combinedDada_BLAST_T_2024_02_14_0410.tsv"
