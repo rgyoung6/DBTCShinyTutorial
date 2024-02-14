@@ -1,0 +1,4 @@
+	inputReads	fwdInputQualMin	fwdInputQualMedian	fwdInputQualMean	fwdInputQualMax	filteredReads	fwdDenoisedReads	fwdDenoisedAvgQual	fwdDenoisedAvgLen	fwdDenoisedUniqueReads	finalCleanedPerReads
+B1_S20_L001	151732	2	25	24.1746112668876	38	118811	116432	35.95	253.52	562	0.7674
+B2_S21_L001	128223	2	25	24.0671055963535	38	104073	103158	35.74	245.14	411	0.8045
+B3_S19_L001	182171	2	25	24.1911162314388	38	149051	147333	36.02	254.51	342	0.8088

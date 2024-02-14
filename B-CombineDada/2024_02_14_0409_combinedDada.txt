@@ -1,0 +1,8 @@
+2024_02_14_0409 Start
+The files being combined with an associated unique identifying number (File_Unique_ID column) used in the uniqueID column of the output file...
+File_Path	File	File_Name	File_Unique_ID
+E:/A_Test_DBTCShiny/S/B-CombineDada/2024_02_13_0304_Run1_Merge.tsv	2024_02_13_0304_Run1_Merge.tsv	2024_02_13_0304_Run1_Merge	1
+E:/A_Test_DBTCShiny/S/B-CombineDada/2024_02_13_0307_Run2_Merge.tsv	2024_02_13_0307_Run2_Merge.tsv	2024_02_13_0307_Run2_Merge	2
+Starting file 2024_02_13_0304_Run1_Merge at time...2024-02-14 04:09:29
+Starting file 2024_02_13_0307_Run2_Merge at time...2024-02-14 04:09:29
+Start time...2024-02-14 04:09:29 end time 2024-02-14 04:09:31

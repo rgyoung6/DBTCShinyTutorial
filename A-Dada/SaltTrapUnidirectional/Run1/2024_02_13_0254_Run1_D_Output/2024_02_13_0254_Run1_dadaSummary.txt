@@ -1,0 +1,59 @@
+2024_02_13_0254_Start
+
+Here are the variables used in the analyses...
+********************************************************************************
+Platform: unix
+The working directory: /home/rob/Desktop/A_Test_DBTCShiny/SaltTrapUnidirectional/Run1
+Directional Processing: Uni - TRUE ; bi - FALSE
+Parsing file directional identifiers: Forward(fwdIdent) - _R1_001; Reverse(revIdent) - _R2_001
+Quality truncation value (truncQ): 2
+Minimum read length for the Dada2 filterandtrim() function (truncLenValue): 0
+Minimum read length for the Dada2 filterandtrim() function (truncLenValue): 0
+Forward and reverse trim length values used in the Dada2 filterandtrim() function: Forward (fwdTrimLen) = 0; Reverse (revTrimLen) = 0
+File used containing the forward and reverse trim sequences data: /home/rob/Desktop/A_Test_DBTCShiny/SaltTrapPrimers.tsv
+Forward and reverse trim sequences used in the trim() function from the Insect package: 
+Forward - 
+tgtaaaacgacggccagtgctttcccacgaataaataata
+tgtaaaacgacggccagtggatcaccagatatagcatttcc
+tgtaaaacgacggccagtggatcaccagatatagcttttcc
+tgtaaaacgacggccagtggatcacctgatatagcatttcc
+tgtaaaacgacggccagtggatcacctgatatagcttttcc
+tgtaaaacgacggccagtggatctccagatatagcatttcc
+tgtaaaacgacggccagtggatctccagatatagcttttcc
+tgtaaaacgacggccagtggatctcctgatatagcatttcc
+tgtaaaacgacggccagtggatctcctgatatagcttttcc
+tgtaaaacgacggccagtggatcaccagatatatcatttcc
+tgtaaaacgacggccagtggatcaccagatatatcttttcc
+tgtaaaacgacggccagtggatcacctgatatatcatttcc
+tgtaaaacgacggccagtggatcacctgatatatcttttcc
+tgtaaaacgacggccagtggatctccagatatatcatttcc
+tgtaaaacgacggccagtggatctccagatatatcttttcc
+tgtaaaacgacggccagtggatctcctgatatatcatttcc
+tgtaaaacgacggccagtggatctcctgatatatcttttcc
+Reverse - 
+caggaaacagctatgactaaacttcaggatgaccaaaaaatca
+caggaaacagctatgactaaacttcagggtgaccaaaaaatca
+caggaaacagctatgactaaacttcaggatgtccaaaaaatca
+caggaaacagctatgactaaacttcagggtgtccaaaaaatca
+caggaaacagctatgactaaacttctggatgaccaaaaaatca
+caggaaacagctatgactaaacttctgggtgaccaaaaaatca
+caggaaacagctatgactaaacttctggatgtccaaaaaatca
+caggaaacagctatgactaaacttctgggtgtccaaaaaatca
+Minimum read length for the final results (minFinalSeqLen): 100
+********************************************************************************
+
+Begin generating initial quality figures at time...2024-02-13 02:54:33
+Begin pattern based trimming at time...2024-02-13 02:54:38
+Begin filtering and trimming based on quality arguments at time...2024-02-13 02:54:53
+Begin generating quality filtered figures at time...2024-02-13 02:55:02
+Begin getting error rates at time...2024-02-13 02:55:06
+Here are the error checking files used...
+B1_S20_L001_R1_001.fastq.gz
+B2_S21_L001_R1_001.fastq.gz
+B3_S19_L001_R1_001.fastq.gz
+At the beginning of the forward read error rate calculation at 2024-02-13 02:55:06
+At the end of the error rate calculations at 2024-02-13 02:56:58
+Start dereplicating at 2024-02-13 02:56:58
+Start forward dada at 2024-02-13 02:57:01
+Running the reporting for the analyses... 2024-02-13 02:57:16
+At the end...2024-02-13 02:57:16
