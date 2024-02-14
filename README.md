@@ -18,7 +18,8 @@ Before using these files and working through this tutorial please install the [D
 
 # Data 
 
-The data for the tutorial comes from the publication Young _et al._ 2021
+The data for the tutorial comes from the publication Young _et al._ 2021 which used passive collection of insects using Lindgren funnel traps with a high salt solution to survey for invasive insects. The insects were removed from the traps and the salt solution was retained and used to extract environmental DNA (eDNA). The data used in this example are a subset of the data obtained in this work.
+
 
 
 # References 
