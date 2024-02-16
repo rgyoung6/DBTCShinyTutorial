@@ -53,9 +53,24 @@ To avoid the second situation it is best to run the DBTCShiny through [Posit](ht
 
 All descriptions and comments below relate to the DBTCShiny application and the graphical user interface to implement the functions.
 
+To begin, ensure that the DBTCShiny package is installed in your instance of R and that you have loaded the package through the _'library(DBTCShiny)'_ command (see the [DBTCShiny GitHub repository](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#installation)).
+
+Once all dependencies and the DBTCShiny package are installed and loaded run the program using the following command...
+
+```
+launchDBTCShiny()
+```
+
+Once run you a window will appear in your computers default web browser with the title screen for DBTCShiny (see below)
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/df23f66c-c9a1-4364-b7ad-fa816fe61b79)
+
+
 ([Back to Top](#table-of-contents))
 
 # Dada Implement
+
+After running 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9464aa34-f19b-4380-a3de-3d801b7dad24)
 
