@@ -163,9 +163,17 @@ The next fillable fields provide data on quality trimming and length trimming.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/7d0b609e-29d4-4dd8-b472-6ce7580992e2)
 
-The truncation value field (dada2 parameter truncQ for more info see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>) provides information on the quality where the sequences are trimmed. **The default for this value is 2 and this is what will be used for this tutorial.**
+The truncation value field (dada2 parameter truncQ for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>) provides information on the quality where the sequences are trimmed. **The default for this value is 2 and this is what will be used for this tutorial.**
 
-The final two filable fields are the truncLenValueF and the truncLenValueR values. These values trim the nucleotide sequences based on the overall expected length of the sequences (for more informatino see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). When pattern trimming this function is not used and so these values are set to 0 by default and **we will use 0 for the tutorial.**
+The final two filable fields are the truncLenValueF and the truncLenValueR values. These values trim the nucleotide sequences based on the overall expected length of the sequences (for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). When pattern trimming this function is not used and so these values are set to 0 by default and **we will use 0 for the tutorial.**
+
+
+## 4. Dada learnErrors
+This section provides information on the error assessment and quality filtering of sequences using the dada2 learnErrors() function. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/72d904bb-12ec-4736-8d8d-f8fcdc7e8280)
+
+The dada2 analysis generally evaluates the total number of reads present in a submitted run (a run is a group of results processed at the same time on the same machine representing the same molecular methods) and then takes a percentage of the sequences and estimates the error present. The DBTCShiny uses the same learnErrors() function, but instead forces the function to use a subset of the data by fastq file. In doing this we can provide the files used for the error estimation and the process is reproducible. The first fillable section here identifies the percentage of fastq files used for the analysis. The default is 0.1 or 10%, but in cases where there are very few results the minimum number of files is set to automatically set to three. **For our tutorial we will use the default value of 0.1.**
 
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
