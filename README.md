@@ -58,7 +58,7 @@ To avoid the second situation it is best to run the DBTCShiny through [Posit](ht
 
 All descriptions and comments used in the tutorial below relate to the DBTCShiny application and the graphical user interface to implement the functions.
 
-To begin, ensure that the DBTCShiny package is installed in your instance of R and that you have loaded the package through the _'library(DBTCShiny)'_ command (see the [DBTCShiny GitHub repository](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#installation)).
+To begin, ensure that the DBTCShiny package is installed in your instance of R and that you have loaded the package through the 'library(DBTCShiny)' command (see the [DBTCShiny GitHub repository](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#installation)).
 
 Once all dependencies and the DBTCShiny package are installed and loaded run the program using the following command...
 
