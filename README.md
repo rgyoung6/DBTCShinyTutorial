@@ -109,8 +109,21 @@ When selecting data they need to be in the proper data format (see <a href="http
 ### Primer File
 The second button is the Primer File button. Again, once selected it will bring up a select file dialog window.
 
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/a32bc0cb-94b6-4b2f-8421-85c3858e763c)
+
 Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). Select the bidirectional primer file (please note if selected unidirectional data abve you will need the unidirectional primer file. The format of this file can be viewed by opening it or you can see the description <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences.
 
+### Directional Processing
+There are three options possible to indicate the directinoal data present in your samples. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/70cf5d05-a321-412f-8b48-6897b641293f)
+
+Bidirectional - If selected the data will be processed using both forward and reverse reads. The analysis will merge these reads and the data coming out of the analysis will be merged reads.
+Unidirectional - If selected the data will be processed only in the forward direction. The outcome of the analysis will not be from paired and merged reads but will only represent data from a single direction. Note: if this is selected the Forward identifier and the Reverse identifier sections will disapear from the DBTCShiny interface as these are not needed to identify the forward and reverse elements of paired reads when only processing with on direction (see image below).
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bdab251c-4698-4178-9382-1ecead917a90)
+
+Both - If selected there will be three parallel runs of the data, one merged using both forward and reverse reads, a second analysis using foward reads, and a third analysis using reverse reads (descriptors to indicate the type of analysis will be present on output files and within summary data files. Note: processing using both will significanlty increase the time to analysis, however, the independent forward and reverse analyses may be helpful to assess if there was poor amplification or quality in one of the directions. This could possible help to identify reasons for poor merged data or help to better understand primer issues.
 
 ([Back to Top](#table-of-contents))
 
