@@ -34,9 +34,6 @@ To download the data for the tutorial go to the main [DBTCShinyTutorial](https:/
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bac440d1-1d13-4e9a-8858-5fea48c872fc)
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/8a5d757b-a5ef-4c50-a60a-0b680c505b06)
-
-
 ([Back to Top](#table-of-contents))
 
 # Initial Considerations
@@ -75,7 +72,7 @@ launchDBTCShiny()
 
 Once run a window will appear in your computers default web browser with the title screen for DBTCShiny (see below)
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/df23f66c-c9a1-4364-b7ad-fa816fe61b79)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/8a5d757b-a5ef-4c50-a60a-0b680c505b06)
 
 There are several expandable panels on the initial page that can be explored for more information on installation, dependencies, and contact for troubleshooting. 
 
@@ -149,17 +146,18 @@ These results will be generated for the initial fastq files and the cleaned and 
 ### Maximum number of Mismatches
 This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim off primers and other artifical nucleotide sequence data at the end of reads. 
 
-
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/a6360bd1-c2aa-4198-a25e-8e283bbc2728)
 
 The default for this field is 2. If there are very large primer regions then increasing this value could be considered, but for the purposes of **this tutorial the default value of 2 will be used.**
-
 
 ## 3. Dada filterAndTrim
 This section contains field used by dada2 when end trimming and quality filtering. 
 
-The first field accepts a value for the dada2 length trimming function where it identifies the maximum expected errors value (for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/1634a4e5-987a-42db-a361-a523cd771740)
 
-Both pattern trimming and length trimming cannot occur at the same time. If no 
+The first field accepts a value for the dada2 length trimming function where it identifies the maximum expected errors value (dada2 maxEE parameter and for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
+
+The second field accepts a value for the dada2 quality length trimming function (dada2 truncQ parameter and for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
 
 
 # References 
