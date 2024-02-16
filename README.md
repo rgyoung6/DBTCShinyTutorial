@@ -51,6 +51,15 @@ Finally, the Shiny applicaiton uses buttons, for example the Dada function 'Data
 
 To avoid the second situation it is best to run the DBTCShiny through [Posit](https://posit.co/download/rstudio-desktop/).
 
+All descriptions and comments below relate to the DBTCShiny application and the graphical user interface to implement the functions.
+
+([Back to Top](#table-of-contents))
+
+# Dada Implement
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9464aa34-f19b-4380-a3de-3d801b7dad24)
+
+
 
 
 ([Back to Top](#table-of-contents))
