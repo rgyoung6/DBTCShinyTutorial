@@ -34,6 +34,8 @@ To download the data for the tutorial go to the main [DBTCShinyTutorial](https:/
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bac440d1-1d13-4e9a-8858-5fea48c872fc)
 
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/8a5d757b-a5ef-4c50-a60a-0b680c505b06)
+
 
 ([Back to Top](#table-of-contents))
 
@@ -147,7 +149,7 @@ These results will be generated for the initial fastq files and the cleaned and 
 ### Maximum number of Mismatches
 This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim off primers and other artifical nucleotide sequence data at the end of reads. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3607b004-12d5-4723-a075-b7ef4f25ad21)
+
 
 The default for this field is 2. If there are very large primer regions then increasing this value could be considered, but for the purposes of **this tutorial the default value of 2 will be used.**
 
@@ -158,7 +160,7 @@ This section contains field used by dada2 when end trimming and quality filterin
 The first field accepts a value for the dada2 length trimming function where it identifies the maximum expected errors value (for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
 
 Both pattern trimming and length trimming cannot occur at the same time. If no 
-https://benjjneb.github.io/dada2/tutorial.html
+
 
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
