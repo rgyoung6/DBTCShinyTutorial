@@ -1,0 +1,1 @@
+"C:\D-BLAST\blastn.exe" -db SOC -query "C:\Users\robgy\AppData\Local\Temp\RtmpCcEHfQ\filee9815782122.fas" -max_target_seqs 200 -outfmt "6 qseqid sseqid staxid qcovs pident ssciname scomname qstart qend sstart send evalue" -num_threads 1 -out "C:/D-BLAST/2024_02_14_0409_combinedDada_BLAST_SOC_2024_02_15_1530.tsv"
