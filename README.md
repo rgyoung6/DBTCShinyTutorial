@@ -89,7 +89,7 @@ Finally, before moving on be sure that you have the data downloaded and stored o
 
 DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing runs. While this tutorial will cover some of the possible settings possible when implementing dada2, for more details on the specifics of the settings available please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
 
-## 1. General Information - There are six options that are available in this section.
+## 1. General Information
    
 ### Data Location button
 Once clicked this button will bring up an open select file dialog window to select the data to process ([see exceptions](#buttons)). 
@@ -102,7 +102,7 @@ Unidirectional - DBTCShinyTutorial-main/A-Dada/SaltTrapUnidirectional
 The fastq data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains one direction of sequence data and the data in this folder can be used to test the unidirectional processing in DBTCShiny (see the directional processing section below). 
 
 Bidirectional - DBTCShinyTutorial-main/A-Dada/SaltTrapBidirectional
-The bidirectional data is contained in the SaltTrapBidirectional folder and will be the data that will be used throughout this tutorial. This is the data you should select.
+The bidirectional data is contained in the SaltTrapBidirectional folder and will be the data that will be used throughout this tutorial. **This is the data you should select.**
 
 When selecting data they need to be in the proper data format (see <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). These examples are in the correct file structure. The user must select one of the files within any of the runs inside the SaltTrapBidirectional folder. Please also note how all of the fastq files are compressed in .gz format and are not in any further file structures in the run folders. Once a file is selected this will close the selection window and show that a file was selected in the DBTCShiny web browser window.
 
@@ -111,14 +111,15 @@ The second button is the Primer File button. Again, once selected it will bring 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/a32bc0cb-94b6-4b2f-8421-85c3858e763c)
 
-Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). Select the bidirectional primer file (please note if selected unidirectional data abve you will need the unidirectional primer file. The format of this file can be viewed by opening it or you can see the description <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences.
+Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). **Select the bidirectional primer file** (please note if unidirectional was selected above you will need the unidirectional primer file). The format of this file can be viewed by opening it or you can see the description <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences. Note: With your own data if you are getting poor quality matches to library sequences it could be due to the presence of primers and other indicies or tags which were not properly removed from the sequence data and the contents of this file should be considered in these cases.
 
 ### Directional Processing
 There are three options possible to indicate the directinoal data present in your samples. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/70cf5d05-a321-412f-8b48-6897b641293f)
 
-Bidirectional - If selected the data will be processed using both forward and reverse reads. The analysis will merge these reads and the data coming out of the analysis will be merged reads.
+Bidirectional - If selected the data will be processed using both forward and reverse reads. The analysis will merge these reads and the data coming out of the analysis will be merged reads. **For the purposes of this tutorial we will process the data only bidirectionally.**
+
 Unidirectional - If selected the data will be processed only in the forward direction. The outcome of the analysis will not be from paired and merged reads but will only represent data from a single direction. Note: if this is selected the Forward identifier and the Reverse identifier sections will disapear from the DBTCShiny interface as these are not needed to identify the forward and reverse elements of paired reads when only processing with on direction (see image below).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bdab251c-4698-4178-9382-1ecead917a90)
@@ -126,6 +127,38 @@ Unidirectional - If selected the data will be processed only in the forward dire
 Both - If selected there will be three parallel runs of the data, one merged using both forward and reverse reads, a second analysis using foward reads, and a third analysis using reverse reads (descriptors to indicate the type of analysis will be present on output files and within summary data files. Note: processing using both will significanlty increase the time to analysis, however, the independent forward and reverse analyses may be helpful to assess if there was poor amplification or quality in one of the directions. This could possible help to identify reasons for poor merged data or help to better understand primer issues.
 
 ([Back to Top](#table-of-contents))
+
+### Forward and Reverse Identifiers
+There are two fillable fields, one for forward and one for reverse. These fields indicate the patterns in the naming convention of the files that will identify if the data file contains forward or reverse data. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/7820f894-24b0-4212-b5ad-24831683f7b0)
+
+The default contents of these fields are patterns often used in MiSeq generated files. If you have other naming conventions you can type them in here now. **For this tutorial we will use the default patters.**
+
+### Print Quality Plots
+This binary selection will, if yes is selected, output files in .pdf format with plots of the quality for the reads being processed. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b302f046-4a89-4605-ad44-fc57484160a4)
+
+These results will be generated for the initial fastq files and the cleaned and trimmed fastq files. The data from the quality analyses are also reported in the final reporting table but these files allow you to visualize the data. The default for this selection is to produce these files, **for the purposes of this tutorial we will select no and not produce these files**.
+
+## 2. Pattern Trim
+
+### Maximum number of Mismatches
+This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim off primers and other artifical nucleotide sequence data at the end of reads. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3607b004-12d5-4723-a075-b7ef4f25ad21)
+
+The default for this field is 2. If there are very large primer regions then increasing this value could be considered, but for the purposes of **this tutorial the default value of 2 will be used.**
+
+
+## 3. Dada filterAndTrim
+This section contains field used by dada2 when end trimming and quality filtering. 
+
+The first field accepts a value for the dada2 length trimming function where it identifies the maximum expected errors value (for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
+
+Both pattern trimming and length trimming cannot occur at the same time. If no 
+https://benjjneb.github.io/dada2/tutorial.html
 
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
