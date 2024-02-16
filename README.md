@@ -45,7 +45,7 @@ The following strings are those used in DBTC and should not be used in file or f
   - _taxaCombined
   - _taxaReduced
 
-Finally, the Shiny applicaiton uses buttons, for example the Dada function 'Data Location'.  Once clicked these buttons will do one of two things. 
+Finally, the Shiny applicaiton uses [buttons](#buttons), for example the Dada function 'Data Location'.  Once clicked these buttons will do one of two things. 
 
   1. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'open file dialog window'). These dialog windows are sometimes opened behind the RShiny DBTCShiny dashboard window. Clicking the R source (R terminal window or Posit/R Studio application) will bring up the dialog window for use. 
   2. In some cases (such as launching DBTCShiny using a terminal window in iOS or Linux or running the R exeuctable in Windows) the file selection will appear in the terminal or exeuctable window where DBTCShiny was initially launched. This input will beed to be entered by typing the path manually.
@@ -84,7 +84,8 @@ DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analys
 
 ## 1. General Information - There are six options that are available in this section.
    
-### Data Location button - Once clicked this button will bring up an open file dialog window to select the data to process. 
+### Data Location button
+Once clicked this button will bring up an open file dialog window to select the data to process ([see exceptions](#buttons)). 
 
 Unidirectional 
 There are two options presented with this tutorial. The first is a data set of unidirectional fastq files in the folder SaltTrapUnidirectional. The data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains can be utilized to test the utility of the DBTCShiny if you have unidirectional data. If selecting this 
