@@ -15,6 +15,7 @@ Before using these files and working through this tutorial please install the [D
 # Table of Contents  
 - [Data](#data)
 - [Initial Considerations](#initial-considerations)
+- [Getting Started](#getting-started)
 - [Dada Implement](#dada-implement)
 - [Combine Dada Output](#combine-dada-output)
 - [Make BLAST DB](#make-blast-db)
@@ -51,7 +52,9 @@ Finally, the Shiny applicaiton uses buttons, for example the Dada function 'Data
 
 To avoid the second situation it is best to run the DBTCShiny through [Posit](https://posit.co/download/rstudio-desktop/).
 
-All descriptions and comments below relate to the DBTCShiny application and the graphical user interface to implement the functions.
+# Gertting Started
+
+All descriptions and comments used in the tutorial below relate to the DBTCShiny application and the graphical user interface to implement the functions.
 
 To begin, ensure that the DBTCShiny package is installed in your instance of R and that you have loaded the package through the _'library(DBTCShiny)'_ command (see the [DBTCShiny GitHub repository](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#installation)).
 
