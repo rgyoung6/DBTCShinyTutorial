@@ -66,7 +66,7 @@ Once all dependencies and the DBTCShiny package are installed and loaded run the
 launchDBTCShiny()
 ```
 
-Once run you a window will appear in your computers default web browser with the title screen for DBTCShiny (see below)
+Once run a window will appear in your computers default web browser with the title screen for DBTCShiny (see below)
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/df23f66c-c9a1-4364-b7ad-fa816fe61b79)
 
