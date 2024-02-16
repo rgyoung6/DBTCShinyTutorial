@@ -28,7 +28,12 @@ Before using these files and working through this tutorial please install the [D
 
 # Data 
 
-The data for the tutorial comes from the publication Young _et al._ 2021 which used passive collection of insects using Lindgren funnel traps with a high salt solution to survey for invasive insects. The insects were removed from the traps and the salt solution was retained and used to extract environmental DNA (eDNA). The data used in this example are a subset of the data obtained in this work.
+The data for the tutorial comes from the publication Young _et al._ 2021 which used passive collection of insects using Lindgren funnel traps with a high salt solution to survey for invasive insects. The insects were removed from the traps and the salt solution was retained and used to extract environmental DNA (eDNA). The data used in the examples in this tutorial are a subset of the data obtained from Young et al. 2001.
+
+To download the data for the tutorial go to the main [DBTCShinyTutorial](https://github.com/rgyoung6/DBTCShinyTutorial) GitHub repository page and select the green button labelled 'Code' and then select 'Download ZIP' (see image below). This will save all of the tutorial files you need to your local computer (Please note that this is a fairly large file approxitmately 526mb). Once downloaded uncompress the contents and place the 'DBTCShinyTutorial-main' in an accessible area of your computer ideally near the root. Also, please make sure that you have permissions for this location so that the files will be accessible for reading and the folders for writing data.
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bac440d1-1d13-4e9a-8858-5fea48c872fc)
+
 
 ([Back to Top](#table-of-contents))
 
