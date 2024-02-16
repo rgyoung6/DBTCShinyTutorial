@@ -153,12 +153,19 @@ The default for this field is 2. If there are very large primer regions then inc
 ## 3. Dada filterAndTrim
 This section contains field used by dada2 when end trimming and quality filtering. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/1634a4e5-987a-42db-a361-a523cd771740)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/f3b3dc42-529e-42e4-a379-1f7e38b42c06)
 
-The first field accepts a value for the dada2 length trimming function where it identifies the maximum expected errors value (dada2 maxEE parameter and for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
+The first two fields accepts values for the dada2 end trimming function (dada2 parameter trimLeft). This function trims from the left and each of the two values here will trim the forward or reverse read respectively (For more information see <a href="https://benjjneb.github.io/dada2/ITS_workflow.html" target="_blank">here</a>). When pattern trimming this function is not utilized. **The default for these values is 0 and these are the values that will be used in this tutorial.** 
 
-The second field accepts a value for the dada2 quality length trimming function (dada2 truncQ parameter and for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
+The third field accepts a value for the dada2 maximum number of expected errors. length trimming function where it identifies the maximum expected errors value (dada2 maxEE parameter and for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
 
+The next fillable fields provide data on quality trimming and length trimming. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/7d0b609e-29d4-4dd8-b472-6ce7580992e2)
+
+The truncation value field (dada2 parameter truncQ for more info see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>) provides information on the quality where the sequences are trimmed. **The default for this value is 2 and this is what will be used for this tutorial.**
+
+The final two filable fields are the truncLenValueF and the truncLenValueR values. These values trim the nucleotide sequences based on the overall expected length of the sequences (for more informatino see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). When pattern trimming this function is not used and so these values are set to 0 by default and **we will use 0 for the tutorial.**
 
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
