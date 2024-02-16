@@ -65,15 +65,17 @@ Once run you a window will appear in your computers default web browser with the
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/df23f66c-c9a1-4364-b7ad-fa816fe61b79)
 
+There are several expandable panels on the initial page that can be explored for more information on installation, dependencies, and contact for troubleshooting. 
+
+The side panel of DBTCShiny contains three additional options. The first option, DBTC Tools conatins all of the main high-throughput processing functions of DBTCSHiny and this is the section where we will first start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny. The first tab is the Dada tab and this is where our tutorial will begin (See image below). 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9464aa34-f19b-4380-a3de-3d801b7dad24)
 
 ([Back to Top](#table-of-contents))
 
 # Dada Implement
 
 After running 
-
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9464aa34-f19b-4380-a3de-3d801b7dad24)
-
 
 
 
