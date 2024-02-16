@@ -47,12 +47,14 @@ The following strings are those used in DBTC and should not be used in file or f
 
 Finally, the Shiny applicaiton uses buttons, for example the Dada function 'Data Location'.  Once clicked these buttons will do one of two things. 
 
-  1. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux). These dialog windows are sometimes opened behind the RShiny DBTCShiny dashboard window. Clicking the R source (R terminal window or Posit/R Studio application) will bring up the dialog window for use. 
+  1. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'open file dialog window'). These dialog windows are sometimes opened behind the RShiny DBTCShiny dashboard window. Clicking the R source (R terminal window or Posit/R Studio application) will bring up the dialog window for use. 
   2. In some cases (such as launching DBTCShiny using a terminal window in iOS or Linux or running the R exeuctable in Windows) the file selection will appear in the terminal or exeuctable window where DBTCShiny was initially launched. This input will beed to be entered by typing the path manually.
 
 To avoid the second situation it is best to run the DBTCShiny through [Posit](https://posit.co/download/rstudio-desktop/).
 
-# Gertting Started
+([Back to Top](#table-of-contents))
+
+# Getting Started
 
 All descriptions and comments used in the tutorial below relate to the DBTCShiny application and the graphical user interface to implement the functions.
 
@@ -78,8 +80,14 @@ The side panel of DBTCShiny contains three additional options. The first option,
 
 # Dada Implement
 
-After running 
+DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing runs. While this tutorial will cover some of the possible settings possible when implementing dada2, for more details on the specifics of the settings available please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
 
+## 1. General Information - There are six options that are available in this section.
+   
+### Data Location button - Once clicked this button will bring up an open file dialog window to select the data to process. 
+
+Unidirectional 
+There are two options presented with this tutorial. The first is a data set of unidirectional fastq files in the folder SaltTrapUnidirectional. The data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains can be utilized to test the utility of the DBTCShiny if you have unidirectional data. If selecting this 
 
 
 ([Back to Top](#table-of-contents))
