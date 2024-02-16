@@ -72,13 +72,13 @@ launchDBTCShiny()
 
 Once run a window will appear in your computers default web browser with the title screen for DBTCShiny (see below)
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/8a5d757b-a5ef-4c50-a60a-0b680c505b06)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/fbf0fb3d-e6bc-4d09-9996-b73d6e1af73e)
 
 There are several expandable panels on the initial page that can be explored for more information on installation, dependencies, and contact for troubleshooting. 
 
 The side panel of DBTCShiny contains three additional options. The first option, DBTC Tools conatins all of the main high-throughput processing functions of DBTCSHiny and this is the section where we will first start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny. The first tab is the Dada tab and this is where our tutorial will begin (See image below). 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9464aa34-f19b-4380-a3de-3d801b7dad24)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/30653efa-ee61-413c-9974-b1c901b975a3)
 
 Finally, before moving on be sure that you have the data downloaded and stored on your local machine (see here if unsure [Data](#data)).
 
