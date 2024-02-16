@@ -52,7 +52,7 @@ The following strings are those used in DBTC and should not be used in file or f
 
 Finally, the Shiny applicaiton uses <a id="buttons"></a>, for example the Dada function 'Data Location'.  Once clicked these buttons will do one of two things. 
 
-  1. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'open file dialog window'). These dialog windows are sometimes opened behind the RShiny DBTCShiny dashboard window. Clicking the R source (R terminal window or Posit/R Studio application) will bring up the dialog window for use. 
+  1. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'select file dialog window'). These dialog windows are sometimes opened behind the RShiny DBTCShiny dashboard window. Clicking the R source (R terminal window or Posit/R Studio application) will bring up the dialog window for use. 
   2. In some cases (such as launching DBTCShiny using a terminal window in iOS or Linux or running the R exeuctable in Windows) the file selection will appear in the terminal or exeuctable window where DBTCShiny was initially launched. This input will need to be entered by typing the path manually.
 
 To avoid the second situation it is best to run the DBTCShiny through [Posit](https://posit.co/download/rstudio-desktop/).
@@ -92,12 +92,24 @@ DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analys
 ## 1. General Information - There are six options that are available in this section.
    
 ### Data Location button
-Once clicked this button will bring up an open file dialog window to select the data to process ([see exceptions](#buttons)). 
+Once clicked this button will bring up an open select file dialog window to select the data to process ([see exceptions](#buttons)). 
 
-For the data provided in this tutorial there are two options, unidirectional data and bidirectional data. 
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/f776dc25-bc2b-402c-aa7c-1e5276b9eb9f)
 
-Unidirectional 
-Fastq files representing unidirectional data are contained in the supplied folder SaltTrapUnidirectional. The data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains one direction of sequence data and the data in this folder can be utilized to test the utility of the DBTCShiny if you have unidirectional data. If selecting this 
+For the data provided in this tutorial there are two options, unidirectional data and bidirectional data. Using the select file dialog window navigate to the downloaded data location and select the A-Dada folder. In this folder there are two subfolders and two files one of each for bidirectional data and unidirectional data. Navigate to one of the foldersin this location either unidirectional or bidirectional, see below for descriptions of each folder.
+
+Unidirectional - DBTCShinyTutorial-main/A-Dada/SaltTrapUnidirectional 
+The fastq data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains one direction of sequence data and the data in this folder can be used to test the unidirectional processing in DBTCShiny (see the directional processing section below). 
+
+Bidirectional - DBTCShinyTutorial-main/A-Dada/SaltTrapBidirectional
+The bidirectional data is contained in the SaltTrapBidirectional folder and will be the data that will be used throughout this tutorial. This is the data you should select.
+
+When selecting data they need to be in the proper data format (see <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). These examples are in the correct file structure. The user must select one of the files within any of the runs inside the SaltTrapBidirectional folder. Please also note how all of the fastq files are compressed in .gz format and are not in any further file structures in the run folders. Once a file is selected this will close the selection window and show that a file was selected in the DBTCShiny web browser window.
+
+### Primer File
+The second button is the Primer File button. Again, once selected it will bring up a select file dialog window.
+
+Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). Select the bidirectional primer file (please note if selected unidirectional data abve you will need the unidirectional primer file. The format of this file can be viewed by opening it or you can see the description <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences.
 
 
 ([Back to Top](#table-of-contents))
