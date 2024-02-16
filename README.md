@@ -53,7 +53,7 @@ The following strings are those used in DBTC and should not be used in file or f
 Finally, the Shiny applicaiton uses <a id="buttons"></a>, for example the Dada function 'Data Location'.  Once clicked these buttons will do one of two things. 
 
   1. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'open file dialog window'). These dialog windows are sometimes opened behind the RShiny DBTCShiny dashboard window. Clicking the R source (R terminal window or Posit/R Studio application) will bring up the dialog window for use. 
-  2. In some cases (such as launching DBTCShiny using a terminal window in iOS or Linux or running the R exeuctable in Windows) the file selection will appear in the terminal or exeuctable window where DBTCShiny was initially launched. This input will beed to be entered by typing the path manually.
+  2. In some cases (such as launching DBTCShiny using a terminal window in iOS or Linux or running the R exeuctable in Windows) the file selection will appear in the terminal or exeuctable window where DBTCShiny was initially launched. This input will need to be entered by typing the path manually.
 
 To avoid the second situation it is best to run the DBTCShiny through [Posit](https://posit.co/download/rstudio-desktop/).
 
@@ -80,6 +80,8 @@ There are several expandable panels on the initial page that can be explored for
 The side panel of DBTCShiny contains three additional options. The first option, DBTC Tools conatins all of the main high-throughput processing functions of DBTCSHiny and this is the section where we will first start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny. The first tab is the Dada tab and this is where our tutorial will begin (See image below). 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9464aa34-f19b-4380-a3de-3d801b7dad24)
+
+Finally, before moving on be sure that you have the data downloaded and stored on your local machine (see here if unsure [Data](#data)).
 
 ([Back to Top](#table-of-contents))
 
