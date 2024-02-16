@@ -87,8 +87,10 @@ DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analys
 ### Data Location button
 Once clicked this button will bring up an open file dialog window to select the data to process ([see exceptions](#buttons)). 
 
+For the data provided in this tutorial there are two options, unidirectional data and bidirectional data. 
+
 Unidirectional 
-There are two options presented with this tutorial. The first is a data set of unidirectional fastq files in the folder SaltTrapUnidirectional. The data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains can be utilized to test the utility of the DBTCShiny if you have unidirectional data. If selecting this 
+Fastq files representing unidirectional data are contained in the supplied folder SaltTrapUnidirectional. The data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains one direction of sequence data and the data in this folder can be utilized to test the utility of the DBTCShiny if you have unidirectional data. If selecting this 
 
 
 ([Back to Top](#table-of-contents))
