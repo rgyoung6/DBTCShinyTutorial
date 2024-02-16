@@ -1,0 +1,10 @@
+2024_02_16_0240 Start
+The files being combined with an associated unique identifying number (File_Unique_ID column) used in the uniqueID column of the output file...
+File_Path	File	File_Name	File_Unique_ID
+/home/rob/Desktop/DBTCShinyTutorial/F-CombineTaxaAssign/2024_02_14_0409_combinedDada_SOC_taxaAssign_2024_02_16_0224.tsv	2024_02_14_0409_combinedDada_SOC_taxaAssign_2024_02_16_0224.tsv	2024_02_14_0409_combinedDada_SOC	1
+/home/rob/Desktop/DBTCShinyTutorial/F-CombineTaxaAssign/2024_02_14_0409_combinedDada_ST_taxaAssign_2024_02_16_0224.tsv	2024_02_14_0409_combinedDada_ST_taxaAssign_2024_02_16_0224.tsv	2024_02_14_0409_combinedDada_ST	2
+Reading in all of the submitted files at... 2024-02-16 02:40:34
+Completed reading the submitted files at... 2024-02-16 02:40:34
+Begin looping through the unique reads at... 2024-02-16 02:40:34
+The end looping through the unique reads at... 2024-02-16 02:40:54
+Start time...2024-02-16 02:40:34 End time 2024-02-16 02:40:54
