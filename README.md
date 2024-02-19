@@ -178,13 +178,20 @@ The first fillable field in the Dada learnErrors section indicates the percent o
 The second fillable field is for the upper value of the total number of nucleotides used for the error assessment. This value is set very high to allow the selection of files for the error assessment. Lowering this value will cause the assessment of the errors to potentially use only a subset of the selected file subset of files. **The default of value for this field is set to 1,000,000,000 and this is the value we will used for this tutorial.**
 
 ## 5. Dada mergePairs
-This section includes fields necessary for the merging of Pairs section. Please note that this section will disappear if the unidirectional data analysis is selected in the 1. Gerneal Information section.
+This section includes fields necessary for the merging of pairs. Please note that some elements of this section will disappear if the unidirectional data analysis is selected (in the Gerneal Information section).
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3d0713b3-63b3-4a30-93bd-81065d9bc48c)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/e6a66d64-f65b-4205-9276-018d649a3b3f)
 
 The first fillable field in the Dada mergePairs section provides a value for the maximum number of mismatches allowed in the merge analysis. The mismatches represents the number of acceptable mismatches in the overlapping sections between merged forward and reverse reads. The smaller this number the more constrained the analysis and the more potential merged pairs will be rejected. As the overlapping region increases, the corresponding increase in the acceptable number of mismatches may result in more reads at the end of the analysis. If this value is lower it will also provide higher confidence in the reulting reads. **The default value is set to 2 and this is the value that will be used in this tutorial.**
 
-The second field in this section is the minimum total number of overlapping nucleotides required to merge forward and reverse pairs. The default value is set to 12 and this is the value that will be used fo rthis tutorial.
+The second field in this section is the minimum total number of overlapping nucleotides required to merge forward and reverse pairs. With increasing overlap this value can also be increased or if kept at the default of 12 as the overlap increases the stringency of the merge will also increase. **The default value is set to 12 and this is the value that will be used for this tutorial.**
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/1cc4789f-441c-4279-a4a7-f9f0a057421d)
+
+The third field is the trim merged reads field. If set to TRUE, this field will trim the merged read to only include data with two nucleotides, one in the forward and one on the reverse read. If set to FALSE then the merged pairs will include longer tails on the ends of the merged sequences in both the forward and reverse directions. **The default value if FALSE and will be used for the tutorial.**
+
+The final field provides a input value for the final total length of the reads coming out of the analysis. This value is set as a default value of 100 and can be adjusted depending on the expected length of the reads based on the molecular primers. **The tutorial will use the default value of 100.**
+
 
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
