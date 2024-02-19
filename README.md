@@ -192,6 +192,15 @@ The third field is the trim merged reads field. If set to TRUE, this field will 
 
 The final field provides a input value for the final total length of the reads coming out of the analysis. This value is set as a default value of 100 and can be adjusted depending on the expected length of the reads based on the molecular primers. **The tutorial will use the default value of 100.**
 
+At the bottom of this section there is a button labeled 'Dada Submit'. Clicking this button will initiate the running of the dada_implement() function.
+
+## Dada Implement Function Output
+
+Once 
+
+# Dada Combine
+
+
 
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
