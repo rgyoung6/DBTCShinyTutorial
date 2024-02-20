@@ -25,7 +25,7 @@ Before using these files and working through this tutorial please install the [D
       - [Print Quality Plots](#print-quality-plots)
   2. Pattern Trim
       - [Maximum Number of Mismatches](#maximum-number-of-mismatches)
-  3. [3. Dada Filter and Trim](#3.-dada-filter-and-trim)
+  3. [Dada Filter and Trim](#dada-filter-and-trim)
   4. [Dada learnErrors]
   5. [Dada mergePairs]
 - [Combine Dada Output](#combine-dada-output)
@@ -99,7 +99,7 @@ Finally, before moving on be sure that you have the data downloaded and stored o
 
 DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing runs. While this tutorial will cover some of the possible settings possible when implementing dada2, for more details on the specifics of the settings available please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
 
-## 1. General Information
+## General Information
    
 ### Data Location button
 Once clicked this button will bring up an open select file dialog window to select the data to process ([see exceptions](#buttons)). 
@@ -160,7 +160,7 @@ These results will be generated for the initial fastq files and the cleaned and 
 
 ([Back to Top](#table-of-contents))
 
-## 2. Pattern Trim
+## Pattern Trim
 
 ### Maximum number of Mismatches
 This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim off primers and other artifical nucleotide sequence data at the end of reads. 
@@ -171,7 +171,7 @@ The default for this field is 2. If there are very large primer regions then inc
 
 ([Back to Top](#table-of-contents))
 
-## 3. Dada Filter and Trim
+## Dada Filter and Trim
 This section contains field used by dada2 when end trimming and quality filtering. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/f3b3dc42-529e-42e4-a379-1f7e38b42c06)
