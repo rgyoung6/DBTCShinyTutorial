@@ -25,7 +25,7 @@ Before using these files and working through this tutorial please install the [D
       - [Print Quality Plots](#print-quality-plots)
   2. Pattern Trim
       - [Maximum Number of Mismatches](#maximum-number-of-mismatches)
-  3. [Dada fileterandtrim](#dada-filterandtrim)
+  3. [Dada Filter and Trim](#dada-filter-and-trim)
 - [Combine Dada Output](#combine-dada-output)
 - [Make BLAST DB](#make-blast-db)
 - [Sequence BLAST](#sequence-blast)
@@ -169,7 +169,7 @@ The default for this field is 2. If there are very large primer regions then inc
 
 ([Back to Top](#table-of-contents))
 
-## 3. Dada filterAndTrim
+## 3. Dada Filter and Trim
 This section contains field used by dada2 when end trimming and quality filtering. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/f3b3dc42-529e-42e4-a379-1f7e38b42c06)
