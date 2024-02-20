@@ -107,12 +107,16 @@ The bidirectional data is contained in the SaltTrapBidirectional folder and will
 
 When selecting data they need to be in the proper data format (see <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). These examples are in the correct file structure. The user must select one of the files within any of the runs inside the SaltTrapBidirectional folder. Please also note how all of the fastq files are compressed in .gz format and are not in any further file structures in the run folders. Once a file is selected this will close the selection window and show that a file was selected in the DBTCShiny web browser window.
 
+([Back to Top](#table-of-contents))
+
 ### Primer File
 The second button is the Primer File button. Again, once selected it will bring up a select file dialog window.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/a32bc0cb-94b6-4b2f-8421-85c3858e763c)
 
 Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). **Select the bidirectional primer file** (please note if unidirectional was selected above you will need the unidirectional primer file). The format of this file can be viewed by opening it or you can see the description <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences. Note: With your own data if you are getting poor quality matches to library sequences it could be due to the presence of primers and other indicies or tags which were not properly removed from the sequence data and the contents of this file should be considered in these cases.
+
+([Back to Top](#table-of-contents))
 
 ### Directional Processing
 There are three options possible to indicate the directinoal data present in your samples. 
@@ -136,12 +140,16 @@ There are two fillable fields, one for forward and one for reverse. These fields
 
 The default contents of these fields are patterns often used in MiSeq generated files. If you have other naming conventions you can type them in here now. **For this tutorial we will use the default patters.**
 
+([Back to Top](#table-of-contents))
+
 ### Print Quality Plots
 This binary selection will, if yes is selected, output files in .pdf format with plots of the quality for the reads being processed. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b302f046-4a89-4605-ad44-fc57484160a4)
 
 These results will be generated for the initial fastq files and the cleaned and trimmed fastq files. The data from the quality analyses are also reported in the final reporting table but these files allow you to visualize the data. The default for this selection is to produce these files, **for the purposes of this tutorial we will select no and not produce these files**.
+
+([Back to Top](#table-of-contents))
 
 ## 2. Pattern Trim
 
@@ -151,6 +159,8 @@ This section has a single field that accepts numeric input. This value is used b
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/a6360bd1-c2aa-4198-a25e-8e283bbc2728)
 
 The default for this field is 2. If there are very large primer regions then increasing this value could be considered, but for the purposes of **this tutorial the default value of 2 will be used.**
+
+([Back to Top](#table-of-contents))
 
 ## 3. Dada filterAndTrim
 This section contains field used by dada2 when end trimming and quality filtering. 
@@ -169,6 +179,7 @@ The truncation value field (dada2 parameter truncQ for more information see <a h
 
 The final two filable fields are the truncLenValueF and the truncLenValueR values. These values trim the nucleotide sequences based on the overall expected length of the sequences (for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). When pattern trimming this function is not used and so these values are set to 0 by default and **we will use 0 for the tutorial.**
 
+([Back to Top](#table-of-contents))
 
 ## 4. Dada learnErrors
 This section provides information on the error assessment and quality filtering of sequences using the dada2 learnErrors() function. 
@@ -178,6 +189,8 @@ This section provides information on the error assessment and quality filtering 
 The first fillable field in the Dada learnErrors section indicates the percent of data to use when assessing errors. The dada2 analysis generally evaluates the total number of reads present in a submitted run (a run is a group of results processed at the same time on the same machine representing the same molecular methods) and then takes a percentage of the sequences and estimates the error present. The DBTCShiny uses the same learnErrors() function, but instead forces the function to use a subset of the data by fastq file wholistically. In doing this we can provide the files used for the error estimation and the process is reproducible. The first fillable section here identifies the percentage of fastq files used for the analysis. The default is 0.1 or 10%, but in cases where there are very few results files and when the percent of the files is three or fewer, the minimum number of files is automatically set to three. **For our tutorial we will use the default value of 0.1.**
 
 The second fillable field is for the upper value of the total number of nucleotides used for the error assessment. This value is set very high to allow the selection of files for the error assessment. Lowering this value will cause the assessment of the errors to potentially use only a subset of the selected file subset of files. **The default of value for this field is set to 1,000,000,000 and this is the value we will used for this tutorial.**
+
+([Back to Top](#table-of-contents))
 
 ## 5. Dada mergePairs
 This section includes fields necessary for the merging of pairs. Please note that some elements of this section will disappear if the unidirectional data analysis is selected (in the Gerneal Information section).
@@ -196,9 +209,13 @@ The final field provides a input value for the final total length of the reads c
 
 At the bottom of this section there is a button labeled 'Dada Submit'. Clicking this button will initiate the running of the dada_implement() function.
 
+([Back to Top](#table-of-contents))
+
 ## Dada Implement Function Output
 
 Once 
+
+([Back to Top](#table-of-contents))
 
 # Dada Combine
 
