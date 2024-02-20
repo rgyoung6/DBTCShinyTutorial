@@ -28,6 +28,7 @@ Before using these files and working through this tutorial please install the [D
   - [Dada Filter and Trim](#dada-filter-and-trim)
   - [Dada Learn Errors](#dada-learn-errors)
   - [Dada Merge Pairs](#dada-merge-pairs)
+  - [Dada Implement Function Output](#dada-implement-function-output)
 - [Combine Dada Output](#combine-dada-output)
 - [Make BLAST DB](#make-blast-db)
 - [Sequence BLAST](#sequence-blast)
