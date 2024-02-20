@@ -25,7 +25,7 @@ Before using these files and working through this tutorial please install the [D
       - [Print Quality Plots](#print-quality-plots)
   2. Pattern Trim
       - [Maximum Number of Mismatches](#maximum-number-of-mismatches)
-  3. [Dada Filter and Trim](#dada-filter-and-trim)
+  [3. Dada Filter and Trim](#dada-filter-and-trim)
 - [Combine Dada Output](#combine-dada-output)
 - [Make BLAST DB](#make-blast-db)
 - [Sequence BLAST](#sequence-blast)
