@@ -26,8 +26,8 @@ Before using these files and working through this tutorial please install the [D
   2. Pattern Trim
       - [Maximum Number of Mismatches](#maximum-number-of-mismatches)
   3. [Dada Filter and Trim](#dada-filter-and-trim)
-  4. [Dada learnErrors]
-  5. [Dada mergePairs]
+  4. [Dada Learn Errors](#dada-learn-errors)
+  5. [Dada Merge Pairs](#dada-merge-pairs)
 - [Combine Dada Output](#combine-dada-output)
 - [Make BLAST DB](#make-blast-db)
 - [Sequence BLAST](#sequence-blast)
@@ -190,7 +190,7 @@ The final two filable fields are the truncLenValueF and the truncLenValueR value
 
 ([Back to Top](#table-of-contents))
 
-## 4. Dada learnErrors
+## Dada Learn Errors
 This section provides information on the error assessment and quality filtering of sequences using the dada2 learnErrors() function. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/72d904bb-12ec-4736-8d8d-f8fcdc7e8280)
@@ -201,7 +201,7 @@ The second fillable field is for the upper value of the total number of nucleoti
 
 ([Back to Top](#table-of-contents))
 
-## 5. Dada mergePairs
+## Dada Merge Pairs
 This section includes fields necessary for the merging of pairs. Please note that some elements of this section will disappear if the unidirectional data analysis is selected (in the Gerneal Information section).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/e6a66d64-f65b-4205-9276-018d649a3b3f)
