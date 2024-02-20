@@ -19,6 +19,13 @@ Before using these files and working through this tutorial please install the [D
 - [Dada Implement](#dada-implement)
   1. General Informaiton
     - [Data Location button](#data-location-button)
+    - [Primer File](#primer-file)
+    - [Directional Processing](#directional-processing)
+    - [Forward and Reverse Identifiers](#forward-and-reverse-identifiers)
+    - [Print Quality Plots](#print-quality-plots)
+  2. Pattern Trim
+    - [Maximum Number of Mismatches](#maximum-number-of-mismatches)
+  3. [Dada fileterandtrim](#dada-filterandtrim)
 - [Combine Dada Output](#combine-dada-output)
 - [Make BLAST DB](#make-blast-db)
 - [Sequence BLAST](#sequence-blast)
