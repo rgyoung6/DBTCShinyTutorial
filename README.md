@@ -83,26 +83,37 @@ Once run a window will appear in your computers default web browser with the tit
 
 There are several expandable panels on the initial page that can be explored for more information on installation, dependencies, and contact for troubleshooting. 
 
-The side panel of DBTCShiny contains three additional options. The first option, DBTC Tools conatins all of the main high-throughput processing functions of DBTCSHiny and this is the section where we will first start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny. The first tab is the Dada tab and this is where our tutorial will begin (See image below). 
+The side panel (left side of the screen) of DBTCShiny contains two options in addition to the welcome option. The first option, DBTC Tools conatins all of the main high-throughput processing functions of DBTCSHiny and this section is where we will start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny (See image below). 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/30653efa-ee61-413c-9974-b1c901b975a3)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/60310743-9135-448e-bba6-291de9b2eea3)
 
-Finally, before moving on be sure that you have the data downloaded and stored on your local machine (see here if unsure [Data](#data)).
+Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'select file dialog window'). 
+
+Finally, before moving on be sure that you have the tutorial data downloaded and stored on your local machine (see here if unsure [Data](#data)).
 
 ([Back to Top](#table-of-contents))
 
 # Dada Implement
 
-DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing runs. While this tutorial will cover some of the possible settings possible when implementing dada2, for more details on the specifics of the settings available please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
+DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing runs. While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
 
 ## General Information
-   
-### Data Location button
-Once clicked this button will bring up an open select file dialog window to select the data to process ([see exceptions](#buttons)). 
+This section provides file locations, processing saving options.
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/f776dc25-bc2b-402c-aa7c-1e5276b9eb9f)
+### Data Location button
+Once clicked this button will open a select file dialog window to select the data files to process. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0f55cd3d-3cea-4faa-bdb8-fc7ada037e79)
+
+The 'Fastq File' selection will select a file in the appropriate file structure (see Input on the DBTCShiny ReadMe)
+
+
+
 
 For the data provided in this tutorial there are two options, unidirectional data and bidirectional data. Using the select file dialog window navigate to the downloaded data location and select the A-Dada folder. In this folder there are two subfolders and two files one of each for bidirectional data and unidirectional data. Navigate to one of the foldersin this location either unidirectional or bidirectional, see below for descriptions of each folder.
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/23a899c0-514b-4546-84d0-8115ab87e0eb)
+
 
 Unidirectional - DBTCShinyTutorial-main/A-Dada/SaltTrapUnidirectional 
 The fastq data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains one direction of sequence data and the data in this folder can be used to test the unidirectional processing in DBTCShiny (see the directional processing section below). 
