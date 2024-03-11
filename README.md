@@ -112,9 +112,9 @@ The 'Fastq File' selection will need to be in the appropriate file structure (se
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6045cbac-98da-4d6a-b331-da7741179c15)
 
-Once there we will make use of the A-Dada folder and use one of the two options either Bidirectional or Unidirectional (remember this selection as it will matter in a couple of steps). For the purposes of this tutorial we will use the Bidirectional data folder. 
+Once there we will make use of the A-Dada folder and use one of the two options either Bidirectional or Unidirectional (remember this selection as it will matter in a couple of steps). For the purposes of this tutorial we will use the **Bidirectional data folder**. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6450bc6f-aae1-4b5f-93e3-ff564269d0d1)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/269c0cd7-1396-43e3-89f8-683bff60a09e)
 
 Then select either one of the Runs (here we will use the first Run folderbut either could be used). 
 
@@ -124,37 +124,24 @@ And Finally, we will select one of the fastq files. Note: that these files are c
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/c298e6c5-37aa-495a-b8c9-5a8a13fc74a1)
 
-### Primer File
-
-
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/715e6051-50b4-4687-9d02-3cc141ee1464)
-
-
-
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9ee3508a-6da7-4e05-aa0b-4a7904900cb1)
-
-
-Unidirectional - DBTCShinyTutorial-main/A-Dada/SaltTrapUnidirectional 
-The fastq data in this folder do not contain both forward and reverse paired read fastq data files. This dataset only contains one direction of sequence data and the data in this folder can be used to test the unidirectional processing in DBTCShiny (see the directional processing section below). 
-
-Bidirectional - DBTCShinyTutorial-main/A-Dada/SaltTrapBidirectional
-The bidirectional data is contained in the SaltTrapBidirectional folder and will be the data that will be used throughout this tutorial. **This is the data you should select.**
-
-When selecting data they need to be in the proper data format (see <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). These examples are in the correct file structure. The user must select one of the files within any of the runs inside the SaltTrapBidirectional folder. Please also note how all of the fastq files are compressed in .gz format and are not in any further file structures in the run folders. Once a file is selected this will close the selection window and show that a file was selected in the DBTCShiny web browser window.
-
 ([Back to Top](#table-of-contents))
 
 ### Primer File
+
 The second button is the Primer File button. Again, once selected it will bring up a select file dialog window.
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/a32bc0cb-94b6-4b2f-8421-85c3858e763c)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/715e6051-50b4-4687-9d02-3cc141ee1464)
 
-Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). **Select the bidirectional primer file** (please note if unidirectional was selected above you will need the unidirectional primer file). The format of this file can be viewed by opening it or you can see the description <a href="https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#dada-implement" target="_blank">here</a>). The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences. Note: With your own data if you are getting poor quality matches to library sequences it could be due to the presence of primers and other indicies or tags which were not properly removed from the sequence data and the contents of this file should be considered in these cases.
+Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). **Select the bidirectional primer file** (please note if unidirectional was selected above you will need the unidirectional primer file). 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/97e9b201-fc11-4b10-b270-b8bd2c4f83b8)
+
+The format of this file can be viewed by opening it or you can see the description in the DBTCShiny ReadMe [Dada Implement Format of the Primer File](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#dada-implement) Section. The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences. Note: With your own data if you are getting poor quality matches to library sequences it could be due to the presence of primers and other indicies or tags which were not properly removed from the sequence data and the contents of this file should be considered in these cases.
 
 ([Back to Top](#table-of-contents))
 
 ### Directional Processing
-There are three options possible to indicate the directinoal data present in your samples. 
+There are three options possible to indicate the directional data present in your samples. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/70cf5d05-a321-412f-8b48-6897b641293f)
 
