@@ -132,7 +132,7 @@ The second button is the Primer File button. Again, once selected it will bring 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/715e6051-50b4-4687-9d02-3cc141ee1464)
 
-Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). **Select the bidirectional primer file** (please note if unidirectional was selected above you will need the unidirectional primer file). 
+Navigate to the same A-Dada folder. In this folder there are two primer files (SaltTrapPrimers-Bidirectional.tsv and SaltTrapPrimers-Unidirectional.tsv). **Select the bidirectional primer file** for this tutorial (please note if unidirectional was selected above you will need the unidirectional primer file). 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/97e9b201-fc11-4b10-b270-b8bd2c4f83b8)
 
@@ -143,13 +143,13 @@ The format of this file can be viewed by opening it or you can see the descripti
 ### Directional Processing
 There are three options possible to indicate the directional data present in your samples. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/70cf5d05-a321-412f-8b48-6897b641293f)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/cffadce4-eb12-4348-844b-c2dc65b89a32)
 
-Bidirectional - If selected the data will be processed using both forward and reverse reads. The analysis will merge these reads and the data coming out of the analysis will be merged reads. **For the purposes of this tutorial we will process the data only bidirectionally.**
+Bidirectional - If selected the data will be processed using both forward and reverse reads. The Dada analysis will merge these reads and the data coming out of the analysis will be representative of both the forward and reverse reads. **For the purposes of this tutorial we will process the data only bidirectionally.**
 
-Unidirectional - If selected the data will be processed only in the forward direction. The outcome of the analysis will not be from paired and merged reads but will only represent data from a single direction. Note: if this is selected the Forward identifier and the Reverse identifier sections will disapear from the DBTCShiny interface as these are not needed to identify the forward and reverse elements of paired reads when only processing with on direction (see image below).
+Unidirectional - If selected the data will be processed only in the forward direction. The outcome of the analysis will not be from paired and merged reads but will only represent data from a single direction. Note: if this is selected the Forward identifier and the Reverse identifier sections will disapear from the DBTCShiny interface as these are not needed to identify the forward and reverse elements of paired reads when only processing with one direction (see image below).
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bdab251c-4698-4178-9382-1ecead917a90)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/cfa3f11f-ac5b-4355-aada-e0ab1d1bad78)
 
 Both - If selected there will be three parallel runs of the data, one merged using both forward and reverse reads, a second analysis using foward reads, and a third analysis using reverse reads (descriptors to indicate the type of analysis will be present on output files and within summary data files. Note: processing using both will significanlty increase the time to analysis, however, the independent forward and reverse analyses may be helpful to assess if there was poor amplification or quality in one of the directions. This could possible help to identify reasons for poor merged data or help to better understand primer issues.
 
