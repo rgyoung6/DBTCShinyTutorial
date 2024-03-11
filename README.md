@@ -158,7 +158,7 @@ Both - If selected there will be three parallel runs of the data, one merged usi
 ### Forward and Reverse Identifiers
 There are two fillable fields, one for forward and one for reverse. These fields indicate the patterns in the naming convention of the files that will identify if the data file contains forward or reverse data. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/7820f894-24b0-4212-b5ad-24831683f7b0)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/a944db22-2f6b-4a0f-8dd6-908d2c0d456e)
 
 The default contents of these fields are patterns often used in MiSeq generated files. If you have other naming conventions you can type them in here now. **For this tutorial we will use the default patters.**
 
@@ -167,7 +167,7 @@ The default contents of these fields are patterns often used in MiSeq generated 
 ### Print Quality Plots
 This binary selection will, if yes is selected, output files in .pdf format with plots of the quality for the reads being processed. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b302f046-4a89-4605-ad44-fc57484160a4)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/5b31af72-0e4b-4776-b8ae-b6cfe22de396)
 
 These results will be generated for the initial fastq files and the cleaned and trimmed fastq files. The data from the quality analyses are also reported in the final reporting table but these files allow you to visualize the data. The default for this selection is to produce these files, **for the purposes of this tutorial we will select no and not produce these files**.
 
@@ -176,11 +176,11 @@ These results will be generated for the initial fastq files and the cleaned and 
 ## Pattern Trim
 
 ### Maximum number of Mismatches
-This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim off primers and other artifical nucleotide sequence data at the end of reads. 
+This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim primers and other artifical nucleotide sequence data at the end of reads. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/a6360bd1-c2aa-4198-a25e-8e283bbc2728)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/ef2b8d31-7a09-4951-bb99-b037cbcee0ae)
 
-The default for this field is 2. If there are very large primer regions then increasing this value could be considered, but for the purposes of **this tutorial the default value of 2 will be used.**
+The default for this field is 2 which will allow up to two mismatched nucleotides between primer sequences and experimental reads. If there are very large primer regions then increasing this value could be considered, but for the purposes of **this tutorial the default value of 2 will be used.**
 
 ([Back to Top](#table-of-contents))
 
