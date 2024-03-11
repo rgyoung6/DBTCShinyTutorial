@@ -61,12 +61,7 @@ The following strings are those used in DBTC and should not be used in file or f
   - _taxaCombined
   - _taxaReduced
 
-Finally, the Shiny applicaiton uses <a id="buttons"></a>, for example the Dada function 'Data Location'.  Once clicked these buttons will do one of two things. 
-
-  1. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'select file dialog window'). These dialog windows are sometimes opened behind the RShiny DBTCShiny dashboard window. Clicking the R source (R terminal window or Posit/R Studio application) will bring up the dialog window for use. 
-  2. In some cases (such as launching DBTCShiny using a terminal window in iOS or Linux or running the R exeuctable in Windows) the file selection will appear in the terminal or exeuctable window where DBTCShiny was initially launched. This input will need to be entered by typing the path manually.
-
-To avoid the second situation it is best to run the DBTCShiny through [Posit](https://posit.co/download/rstudio-desktop/).
+The DBTCShiny can be run through the terminal window, R window, or through [Posit](https://posit.co/download/rstudio-desktop/).
 
 ([Back to Top](#table-of-contents))
 
@@ -84,7 +79,7 @@ launchDBTCShiny()
 
 Once run a window will appear in your computers default web browser with the title screen for DBTCShiny (see below)
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/fbf0fb3d-e6bc-4d09-9996-b73d6e1af73e)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/44274e5b-f7d0-438c-8559-1f30e5a7f19a)
 
 There are several expandable panels on the initial page that can be explored for more information on installation, dependencies, and contact for troubleshooting. 
 
