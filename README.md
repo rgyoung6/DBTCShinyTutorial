@@ -189,7 +189,7 @@ This section contains field used by dada2 when end trimming and quality filterin
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/f3b3dc42-529e-42e4-a379-1f7e38b42c06)
 
-The first two fields accepts values for the dada2 end trimming function (dada2 parameter trimLeft). This function trims from the left and each of the two values here will trim the forward or reverse read respectively (For more information see <a href="https://benjjneb.github.io/dada2/ITS_workflow.html" target="_blank">here</a>). When pattern trimming this function is not utilized. **The default for these values is 0 and these are the values that will be used in this tutorial.** 
+The first two fields accept values for the dada2 end trimming function (dada2 parameter trimLeft). This function trims from the left and each of the two values here will trim the forward or reverse read respectively (For more information see <a href="https://benjjneb.github.io/dada2/ITS_workflow.html" target="_blank">here</a>). When pattern trimming this function is not utilized. **The default for these values is 0 (and therefore this function is not used) and these are the values that will be used in this tutorial.** 
 
 The third field accepts a value for the dada2 maximum number of expected errors. length trimming function where it identifies the maximum expected errors value (dada2 maxEE parameter and for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). **For the purposes of this tutorial we will use the default value of 2**
 
@@ -199,7 +199,7 @@ The next fillable fields provide data on quality trimming and length trimming.
 
 The truncation value field (dada2 parameter truncQ for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>) provides information on the quality where the sequences are trimmed. **The default for this value is 2 and this is what will be used for this tutorial.**
 
-The final two filable fields are the truncLenValueF and the truncLenValueR values. These values trim the nucleotide sequences based on the overall expected length of the sequences (for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). When pattern trimming this function is not used and so these values are set to 0 by default and **we will use 0 for the tutorial.**
+The final two filable fields in this section are the truncLenValueF and the truncLenValueR values. These values trim the nucleotide sequences based on the overall expected length of the sequences (for more information see <a href="https://benjjneb.github.io/dada2/tutorial.html" target="_blank">here</a>). When pattern trimming this function is not used and so these values are set to 0 by default and **we will use 0 for the tutorial.**
 
 ([Back to Top](#table-of-contents))
 
@@ -210,7 +210,7 @@ This section provides information on the error assessment and quality filtering 
 
 The first fillable field in the Dada learnErrors section indicates the percent of data to use when assessing errors. The dada2 analysis generally evaluates the total number of reads present in a submitted run (a run is a group of results processed at the same time on the same machine representing the same molecular methods) and then takes a percentage of the sequences and estimates the error present. The DBTCShiny uses the same learnErrors() function, but instead forces the function to use a subset of the data by fastq file wholistically. In doing this we can provide the files used for the error estimation and the process is reproducible. The first fillable section here identifies the percentage of fastq files used for the analysis. The default is 0.1 or 10%, but in cases where there are very few results files and when the percent of the files is three or fewer, the minimum number of files is automatically set to three. **For our tutorial we will use the default value of 0.1.**
 
-The second fillable field is for the upper value of the total number of nucleotides used for the error assessment. This value is set very high to allow the selection of files for the error assessment. Lowering this value will cause the assessment of the errors to potentially use only a subset of the selected file subset of files. **The default of value for this field is set to 1,000,000,000 and this is the value we will used for this tutorial.**
+The second fillable field is for the upper value of the total number of nucleotides used for the error assessment. This value is set very high to allow the selection of files for the error assessment. Lowering this value will cause the assessment of the errors to potentially use only a subset of the selected files. **The default of value for this field is set to 1,000,000,000 and this is the value we will used for this tutorial.**
 
 ([Back to Top](#table-of-contents))
 
@@ -227,7 +227,7 @@ The second field in this section is the minimum total number of overlapping nucl
 
 The third field is the trim merged reads field. If set to TRUE, this field will trim the merged read to only include data with two nucleotides, one in the forward and one on the reverse read. If set to FALSE then the merged pairs will include longer tails on the ends of the merged sequences in both the forward and reverse directions. **The default value if FALSE and will be used for the tutorial.**
 
-The final field provides a input value for the final total length of the reads coming out of the analysis. This value is set as a default value of 100 and can be adjusted depending on the expected length of the reads based on the molecular primers. **The tutorial will use the default value of 100.**
+The final field provides an input value for the final total length of the reads coming out of the analysis. This value is set as a default value of 100 and can be adjusted depending on the expected length of the reads based on the molecular primers. **The tutorial will use the default value of 100.**
 
 At the bottom of this section there is a button labeled 'Dada Submit'. Clicking this button will initiate the running of the dada_implement() function.
 
