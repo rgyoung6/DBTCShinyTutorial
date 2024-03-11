@@ -98,21 +98,32 @@ Finally, before moving on be sure that you have the tutorial data downloaded and
 DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing runs. While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
 
 ## General Information
-This section provides file locations, processing saving options.
+This section provides file locations, processing, and saving options for the Dada analysis of Fastq files.
 
 ### Data Location button
-Once clicked this button will open a select file dialog window to select the data files to process. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0f55cd3d-3cea-4faa-bdb8-fc7ada037e79)
 
-The 'Fastq File' selection will select a file in the appropriate file structure (see Input on the DBTCShiny ReadMe)
-
-
-
-
-For the data provided in this tutorial there are two options, unidirectional data and bidirectional data. Using the select file dialog window navigate to the downloaded data location and select the A-Dada folder. In this folder there are two subfolders and two files one of each for bidirectional data and unidirectional data. Navigate to one of the foldersin this location either unidirectional or bidirectional, see below for descriptions of each folder.
+Once clicked this button will open a select file dialog window to select the data files to process. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/23a899c0-514b-4546-84d0-8115ab87e0eb)
+
+The 'Fastq File' selection will need to be in the appropriate file structure (see [Input](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#dada-implement) in the DBTCShiny ReadMe). Move to the location of your downloaded and extracted tutorial files.
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6045cbac-98da-4d6a-b331-da7741179c15)
+
+Once there use the A-Dada folder and use one of the two options either Bidirectional or Unidirectional (remember this selection as it will matter in a couple of steps). For the purposes of this tutorial we will use the Bidirectional data folder. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6450bc6f-aae1-4b5f-93e3-ff564269d0d1)
+
+Then select either one of the Runs (here we will use the first Run folder). 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/fb52715a-cd6e-4d24-9858-5c18b489e0f6)
+
+And Finally, we will select one of the fastq files. Note: that these files are compressed, but are not paired within a compressed folder, the files are paired through naming convention see [Forward and Revers Identifiers](https://github.com/rgyoung6/DBTCShinyTutorial?tab=readme-ov-file#forward-and-reverse-identifiers).
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/c298e6c5-37aa-495a-b8c9-5a8a13fc74a1)
+
 
 
 Unidirectional - DBTCShinyTutorial-main/A-Dada/SaltTrapUnidirectional 
