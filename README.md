@@ -50,7 +50,7 @@ To download the data for the tutorial go to the main [DBTCShinyTutorial](https:/
 
 # Initial Considerations
 
-When working with the DBTCShiny applicaiton there are some limitations. The functions in the package make use of several external resources and programs. The programs do not work well when there is white space in the naming conventions of files and directories. As such it is reccommended that when using DBTCShiny, working files and folders be as close to the root directory (computer or external hard drive). 
+When working with the DBTCShiny applicaiton there are some limitations. The functions in the package make use of several external resources and programs. The programs do not work well when there is white space in the naming conventions of files and directories. As such it is reccommended that when using DBTCShiny, working files and folders be as close to the [root](https://en.wikipedia.org/wiki/Root_directory) directory (computer or external hard drive). 
 
 Also, special characters should be avoided (including question mark, number sign, exclamation mark). It is reccommended that dashes be used for separations in naming conventions while retaining underscores for use as information deliminters (this is how DBTC functions use underscore). 
 
