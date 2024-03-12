@@ -26,6 +26,8 @@ Before using these files and working through this tutorial please install the [D
   - [Pattern Trim](#pattern-trim)
       - [Maximum Number of Mismatches](#maximum-number-of-mismatches)
   - [Dada Filter and Trim](#dada-filter-and-trim)
+      - [Trim Length and Errors Allowed](#trim-length-and-errors-allowed)
+      - [Quality Trim and Length Trim Options](#quality-trim-and-length-trim-options)
   - [Dada Learn Errors](#dada-learn-errors)
   - [Dada Merge Pairs](#dada-merge-pairs)
   - [Dada Implement Function Output](#dada-implement-function-output)
@@ -186,6 +188,8 @@ The default for this field is 2 which will allow up to two mismatched nucleotide
 
 ## Dada Filter and Trim
 This section contains field used by dada2 when end trimming and quality filtering. 
+
+### Trim Length and Errors Allowed
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/f3b3dc42-529e-42e4-a379-1f7e38b42c06)
 
