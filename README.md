@@ -121,7 +121,7 @@ Once there we will make use of the A-Dada folder and use one of the two options 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/269c0cd7-1396-43e3-89f8-683bff60a09e)
 
-Then select either one of the <a href="https://github.com/rgyoung6/DBTCShinyTutorial/tree/main" target="_blank">runs</a>) (here we will use the first Run folder but either could be used). 
+Then select either one of the [runs](#runs) (here we will use the first Run folder but either could be used). 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/fb52715a-cd6e-4d24-9858-5c18b489e0f6)
 
