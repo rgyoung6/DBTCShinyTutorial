@@ -100,7 +100,7 @@ Finally, before moving on be sure that you have the tutorial data downloaded and
 
 # Dada Implement
 
-DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing <a id="runs"></a> (A run is a group of results processed at the same time on the same machine representing the same molecular methods). While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
+DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing **<a id="runs"></a>** (A run is a group of results processed at the same time on the same machine representing the same molecular methods). While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
 
 ## General Information
 This section provides file locations, processing, and saving options for the Dada analysis of Fastq files.
