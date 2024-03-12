@@ -31,6 +31,9 @@ Before using these files and working through this tutorial please install the [D
   - [Dada Learn Errors](#dada-learn-errors)
   - [Dada Merge Pairs](#dada-merge-pairs)
   - [Dada Implement Function Output](#dada-implement-function-output)
+      - [Quality Plot Folders](#quality-plot-folders)
+      - [Filtered and Filtered and Trimmed Files](#filtered-and-filtered-and-trimmed-files)
+      - [Main Output Files](#main-output-files)
 - [Combine Dada Output](#combine-dada-output)
 - [Make BLAST DB](#make-blast-db)
 - [Sequence BLAST](#sequence-blast)
@@ -239,24 +242,30 @@ At the bottom of this section there is a button labeled 'Dada Submit'. Clicking 
 
 ## Dada Implement Function Output
 
-Output files
+### Quality Plot Folders
+The output from the dada_implement() function can include up to four file folders in each of the Run folders submitted. In our example we are missing the output folder 'A_Qual' and 'C_FiltQual' as we selected FALSE for the [print quality plots](https://github.com/rgyoung6/DBTCShinyTutorial?tab=readme-ov-file#print-quality-plots) option. If this was set to TRUE then there would be two additional folders with plots displaying the quality metrics of each of the raw (in folder A) and filtered and trimmed (in folder C) results.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/ce957e29-a39c-4f2e-8fa3-69626a6fd626)
 
+### Filtered and Filtered and Trimmed Files
 
-Filtered Files
+The 'B_Filt' folder contains the filtered files and trimmed results (in the 'Primer_Trim' subfolder) in fastq compressed files. These are provided as they represent the the raw output from the analysis and could be evaluated using other programs outside of the DBTCShiny pipeline.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/5fd2fd33-9e60-4077-bcca-20d3ae1fc388)
 
+### Main Output Files
 
-Filtered and Trimmed Files
+There are five main types of files as output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement):
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2e8001c2-2b7d-4a4c-ab94-7145ed3ae511)
+**dadaSummary** 
+A text based summary of all of the settings used to process the fastq files in this instance of [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement)
 
+**dadaSummaryTable**
+- Error -
+- Run ASV Tables (i.e. Merge) -
+- TotalTable -
 
-
-Output files
-
+  
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6ad16b63-6ce2-4af4-aa5c-b46e78870dbc)
 
 
