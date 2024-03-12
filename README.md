@@ -76,13 +76,13 @@ All descriptions and comments used in the tutorial below relate to the DBTCShiny
 
 To begin, ensure that the DBTCShiny package is installed in your instance of R and that you have loaded the package through the library('DBTCShiny') command (see the [DBTCShiny GitHub repository](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#installation)).
 
-Once all dependencies and the DBTCShiny package are installed and loaded run the program using the following command...
+Once all dependencies and the DBTCShiny package are installed and loaded, start the program using the following command...
 
 ```
 launchDBTCShiny()
 ```
 
-Once run a window will appear in your computers default web browser with the title screen for DBTCShiny (see below)
+Once initiated a window will appear in your computers default web browser with the title screen for DBTCShiny (see below)
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/44274e5b-f7d0-438c-8559-1f30e5a7f19a)
 
@@ -100,7 +100,7 @@ Finally, before moving on be sure that you have the tutorial data downloaded and
 
 # Dada Implement
 
-DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing runs. While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
+DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing <a id="runs"></a> (A run is a group of results processed at the same time on the same machine representing the same molecular methods). While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
 
 ## General Information
 This section provides file locations, processing, and saving options for the Dada analysis of Fastq files.
@@ -121,7 +121,7 @@ Once there we will make use of the A-Dada folder and use one of the two options 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/269c0cd7-1396-43e3-89f8-683bff60a09e)
 
-Then select either one of the Runs (here we will use the first Run folderbut either could be used). 
+Then select either one of the <a href="https://github.com/rgyoung6/DBTCShinyTutorial/tree/main" target="_blank">runs</a>) (here we will use the first Run folder but either could be used). 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/fb52715a-cd6e-4d24-9858-5c18b489e0f6)
 
@@ -243,7 +243,7 @@ At the bottom of this section there is a button labeled 'Dada Submit'. Clicking 
 ## Dada Implement Function Output
 
 ### Quality Plot Folders
-The output from the dada_implement() function can include up to four file folders in each of the Run folders submitted. In our example we are missing the output folder 'A_Qual' and 'C_FiltQual' as we selected FALSE for the [print quality plots](https://github.com/rgyoung6/DBTCShinyTutorial?tab=readme-ov-file#print-quality-plots) option. If this was set to TRUE then there would be two additional folders with plots displaying the quality metrics of each of the raw (in folder A) and filtered and trimmed (in folder C) results.
+The output from the dada_implement() function can include up to four file folders in each of the Run folders submitted. In our example we are missing the output folder 'A_Qual' and 'C_FiltQual' as we selected FALSE for the [print quality plots](https://github.com/rgyoung6/DBTCShinyTutorial?tab=readme-ov-file#print-quality-plots) option. If this was set to TRUE then there would be two additional folders with plots displaying the quality metrics of each of the raw (in folder 'A_Qual') and filtered and trimmed (in folder 'C_FiltQual') results.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/ce957e29-a39c-4f2e-8fa3-69626a6fd626)
 
@@ -256,24 +256,16 @@ The 'B_Filt' folder contains the filtered files and trimmed results (in the 'Pri
 ### Main Output Files
 
 There are five main types of files as output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement):
-
-**dadaSummary** 
-A text based summary of all of the settings used to process the fastq files in this instance of [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement)
-
-**dadaSummaryTable**
-- Error -
-- Run ASV Tables (i.e. Merge) -
-- TotalTable -
-
   
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6ad16b63-6ce2-4af4-aa5c-b46e78870dbc)
 
+**dadaSummary** 
 
-dadaSummary file - Variables used in the Dada analysis
+A text based summary of all of the settings used to process the fastq files in this instance of [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement)
 
+**dadaSummaryTable**
 
-
-
+The dadaSummaryTable contains descriptive data about all of the fastq files processed from this Run
 
 **Dada Summary Table headers**
 - inputReads
@@ -301,6 +293,22 @@ dadaSummary file - Variables used in the Dada analysis
 - noChimTrimUniqueReadsOverMinLen
 - noChimTrimAvgLenOverMinLen
 - finalCleanedPerReads
+
+**Error Assessments** 
+
+**Run ASV Tables**
+(i.e. Merge) 
+
+**TotalTable**
+
+
+dadaSummary file - Variables used in the Dada analysis
+
+
+
+
+
+
 
 Error Assessment visualization 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/c23fd216-b091-4871-826e-6bb09e08711b)
