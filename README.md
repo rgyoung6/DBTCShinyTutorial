@@ -239,58 +239,59 @@ At the bottom of this section there is a button labeled 'Dada Submit'. Clicking 
 
 ## Dada Implement Function Output
 
-Once 
-
 Output files
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/ce957e29-a39c-4f2e-8fa3-69626a6fd626)
 
 
 Filtered Files
+
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/5fd2fd33-9e60-4077-bcca-20d3ae1fc388)
 
 
 Filtered and Trimmed Files
+
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2e8001c2-2b7d-4a4c-ab94-7145ed3ae511)
 
 
 
 Output files
+
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6ad16b63-6ce2-4af4-aa5c-b46e78870dbc)
+
 
 dadaSummary file - Variables used in the Dada analysis
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/88a6ea28-9232-43c6-8e50-23942054bc10)
 
 
 
-Dada Summary Table headers
 
-inputReads
-fwdInputQualMin
-fwdInputQualMedian
-fwdInputQualMean
-fwdInputQualMax
-revInputQualMin
-revInputQualMedian
-revInputQualMean
-revInputQualMax
-filteredReads
-fwdDenoisedReads
-fwdDenoisedAvgQual
-fwdDenoisedAvgLen
-fwdDenoisedUniqueReads
-revDenoisedReads
-revDenoisedAvgQual
-revDenoisedAvgLen
-revDenoisedUniqueReads
-mergedReads
-mergedReadsAvgLen
-noChimReads
-noChimTrimReadsOverMinLen
-noChimTrimUniqueReadsOverMinLen
-noChimTrimAvgLenOverMinLen
-finalCleanedPerReads
+**Dada Summary Table headers**
+- inputReads
+- fwdInputQualMin
+- fwdInputQualMedian
+- fwdInputQualMean
+- fwdInputQualMax
+- revInputQualMin
+- revInputQualMedian
+- revInputQualMean
+- revInputQualMax
+- filteredReads
+- fwdDenoisedReads
+- fwdDenoisedAvgQual
+- fwdDenoisedAvgLen
+- fwdDenoisedUniqueReads
+- revDenoisedReads
+- revDenoisedAvgQual
+- revDenoisedAvgLen
+- revDenoisedUniqueReads
+- mergedReads
+- mergedReadsAvgLen
+- noChimReads
+- noChimTrimReadsOverMinLen
+- noChimTrimUniqueReadsOverMinLen
+- noChimTrimAvgLenOverMinLen
+- finalCleanedPerReads
 
 Error Assessment visualization 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/c23fd216-b091-4871-826e-6bb09e08711b)
