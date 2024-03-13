@@ -36,7 +36,7 @@ Before using these files and working through this tutorial please install the [D
       - [Main Output Files](#main-output-files)
       - [Next Step Data Files](#next-step-data-files)
 - [Combine Dada Output](#combine-dada-output)
-- [Make a BLAST Database](# Make-a-blast-database)
+- [Make a BLAST Database](#Make-a-blast-database)
 - [Sequence BLAST](#sequence-blast)
 - [Taxon Assignment](#taxon-assignment)
 - [Combine Assignment Output](#combine-assignment-output)
