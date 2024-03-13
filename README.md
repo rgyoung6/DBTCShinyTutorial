@@ -336,6 +336,15 @@ The [combine_dada_output()](https://github.com/rgyoung6/DBTCShiny/blob/main/READ
 
 # Make a BLAST Database
 
+There are no data files from previous DBTCShiny elements that lead into this function. Instead, an externally created fasta file is necessary to establish a custom BLASTable database. This file can be manually created or can more effectively and efficiently created through the use of the [MACER GitHub](https://github.com/rgyoung6/MACER) package. In either instance the final format must be in the MACER format (see below).
+
+- The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
+
+For this tutorial there are two preassembled fasta files. The 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0b863ce6-4980-4b69-83fd-30b63c2077c2)
+
+
 make_BLAST_DB 
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
