@@ -340,9 +340,13 @@ There are no data files from previous DBTCShiny elements that lead into this fun
 
 - The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
 
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0b863ce6-4980-4b69-83fd-30b63c2077c2)
+
+
 For this tutorial there are two preassembled fasta files. The 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0b863ce6-4980-4b69-83fd-30b63c2077c2)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3be0acc8-d8d5-4c85-948e-5f6f14564221)
+
 
 
 make_BLAST_DB 
