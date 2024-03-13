@@ -332,6 +332,7 @@ The output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab
 
 The [combine_dada_output()](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#combine-dada-output) function produces three output files. The paired ASV-fasta files and a summary file containing information on the implementation of the function.
 
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/e9b7c9fb-27f8-4d03-927c-8ba3c061882b)
 
 
 # References 
