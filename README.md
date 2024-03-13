@@ -36,7 +36,7 @@ Before using these files and working through this tutorial please install the [D
       - [Main Output Files](#main-output-files)
       - [Next Step Data Files](#next-step-data-files)
 - [Combine Dada Output](#combine-dada-output)
-- [Make BLAST DB](#make-blast-db)
+- [Make a BLAST Database](# Make-a-blast-database)
 - [Sequence BLAST](#sequence-blast)
 - [Taxon Assignment](#taxon-assignment)
 - [Combine Assignment Output](#combine-assignment-output)
@@ -330,11 +330,13 @@ The output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b4b331c4-0fed-4e63-99cf-e82b9e304d85)
 
-The [combine_dada_output()](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#combine-dada-output) function produces three output files. The paired ASV-fasta files and a summary file containing information on the implementation of the function.
+The [combine_dada_output()](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#combine-dada-output) function produces three output files. The paired ASV-fasta files and a summary file containing information on the implementation of the function (see the image below of the output files for this tutorial).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/e9b7c9fb-27f8-4d03-927c-8ba3c061882b)
 
+# Make a BLAST Database
 
+make_BLAST_DB 
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
 
