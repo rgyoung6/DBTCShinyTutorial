@@ -62,7 +62,8 @@ chmod -R 0777 DBTCShinyTutorial-main
 
 For Mac OS another issue may arise where the BLAST software is not recognized as a trusted program. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/8ef3307a-517d-4bf7-8c62-c1e6e53c477a)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2b567c20-9856-42ef-9619-de2a410eaad0)
+
 
 To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following...
 
