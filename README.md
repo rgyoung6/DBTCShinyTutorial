@@ -50,19 +50,28 @@ The data for the tutorial comes from the publication Young _et al._ 2021 which p
 
 To download the data for the tutorial go to the main [DBTCShinyTutorial](https://github.com/rgyoung6/DBTCShinyTutorial) GitHub repository page and select the green button labelled 'Code' and then select 'Download ZIP' (see image below). This will save all of the tutorial files you need to your local computer (Please note that this is a fairly large file approxitmately 526mb). Once downloaded, extract the contents of the compressed file and place the 'DBTCShinyTutorial-main' in an accessible area of your computer ideally near the [root](https://en.wikipedia.org/wiki/Root_directory). 
 
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bac440d1-1d13-4e9a-8858-5fea48c872fc)
+
 ## Permissions 
 
-Also, please make sure that you have [permissions](https://en.wikipedia.org/wiki/File-system_permissions) for this location so that the files will be accessible for reading, the folders for writing data, and that the blastn and makeblastdb files are able to be executed (if you are using these program files instead of loading the programs as trusted software into your system). For Linux [terminal](https://en.wikipedia.org/wiki/Linux#User_interface) and iOS [terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) open a terminal window and navigate to the container holding the 'DBTCShinyTutorial-main' folder you have downloaded and extracted. Once there use the following command to change the permissions on the BLAST program files (Note: you may user [access](https://en.wikipedia.org/wiki/Computer_access_control)to change the file permissions).
+Also, please make sure that you have [permissions](https://en.wikipedia.org/wiki/File-system_permissions) for this location so that the files will be accessible for reading, the folders for writing data, and that the blastn and makeblastdb files are able to be executed (if you are using these program files instead of loading the programs as trusted software into your system). For Linux [terminal](https://en.wikipedia.org/wiki/Linux#User_interface) and Mac OS [terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) open a terminal window and navigate to the container holding the 'DBTCShinyTutorial-main' folder you have downloaded and extracted. Once there use the following command to change the permissions on the BLAST program files (Note: you may user [access](https://en.wikipedia.org/wiki/Computer_access_control)to change the file permissions).
 
 ```
 chmod -R 0777 DBTCShinyTutorial-main
 ```
 
-For iOS another issue may arise where the BLAST software is not recognized as a trusted program. 
+For Mac OS another issue may arise where the BLAST software is not recognized as a trusted program. To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following...
 
+**Right-Click the Application:** Instead of double-clicking to open the file, right-click on the program file.
 
+**Choose Open:** From the context menu that appears after right-clicking, choose "Open." This action should present you with an option to open the file even though it's from an unidentified developer.
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bac440d1-1d13-4e9a-8858-5fea48c872fc)
+**Open Anyway:** After selecting "Open," macOS will display a warning dialog stating that the application cannot be opened because it's from an unidentified developer. In this dialog, there should be an "Open Anyway" button. Click on this button to bypass the warning and open the program file.
+
+**Confirm Your Choice:** You may need to enter your administrator password or confirm your choice before macOS allows the file to be opened. Follow the on-screen prompts to complete this step.
+
+Once complete the program should be usable. Rerun the DBTCShiny and attempt your analysis again.
+
 
 ([Back to Top](#table-of-contents))
 
@@ -105,7 +114,7 @@ The side panel (left side of the screen) of DBTCShiny contains two options in ad
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/60310743-9135-448e-bba6-291de9b2eea3)
 
-Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window (referred to as an 'Open' dialog in iOS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'select file dialog window'). 
+Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'select file dialog window'). 
 
 Finally, before moving on be sure that you have the tutorial data downloaded and stored on your local machine (see here if unsure [Data](#data)).
 
