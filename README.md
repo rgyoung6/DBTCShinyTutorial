@@ -52,7 +52,12 @@ To download the data for the tutorial go to the main [DBTCShinyTutorial](https:/
 
 ## Permissions 
 
-Also, please make sure that you have [permissions](https://en.wikipedia.org/wiki/Computer_access_control) for this location so that the files will be accessible for reading, the folders for writing data, and that the blastn and makeblastdb files are able to be executed (if you are using these program files instead of loading the programs as trusted software into your system). Linux - use the [terminal](https://en.wikipedia.org/wiki/Linux#User_interface) and navigate to the container holdint the 'DBTCShinyTutorial-main' folder you have downloaded and use the command... '''chmod -R 0777 DBTCShinyTutorial-main''' 
+Also, please make sure that you have [permissions](https://en.wikipedia.org/wiki/Computer_access_control) for this location so that the files will be accessible for reading, the folders for writing data, and that the blastn and makeblastdb files are able to be executed (if you are using these program files instead of loading the programs as trusted software into your system). Linux - use the [terminal](https://en.wikipedia.org/wiki/Linux#User_interface) and navigate to the container holdint the 'DBTCShinyTutorial-main' folder you have downloaded and use the command... 
+
+```
+chmod -R 0777 DBTCShinyTutorial-main
+```
+
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/bac440d1-1d13-4e9a-8858-5fea48c872fc)
 
