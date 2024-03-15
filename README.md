@@ -54,7 +54,7 @@ To download the data for the tutorial go to the main [DBTCShinyTutorial](https:/
 
 ## Permissions 
 
-Also, please make sure that you have [permissions](https://en.wikipedia.org/wiki/File-system_permissions) for this location so that the files will be accessible for reading, the folders for writing data, and that the blastn and makeblastdb files are able to be executed (if you are using these program files instead of loading the programs as trusted software into your system). For Linux [terminal](https://en.wikipedia.org/wiki/Linux#User_interface) and Mac OS [terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) open a terminal window and navigate to the container holding the 'DBTCShinyTutorial-main' folder you have downloaded and extracted. Once there use the following command to change the permissions on the BLAST program files (Note: you may user [access](https://en.wikipedia.org/wiki/Computer_access_control) to change the file permissions).
+Also, please make sure that you have [permissions](https://en.wikipedia.org/wiki/File-system_permissions) for this location so that the files will be accessible for reading, the folders for writing data, and that the blastn and makeblastdb files are able to be executed (if you are using these program files instead of loading the programs as trusted software into your system). For Windows, it is not often a problem to run these programs. For Linux [terminal](https://en.wikipedia.org/wiki/Linux#User_interface) and Mac OS [terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) open a terminal window and navigate to the container holding the 'DBTCShinyTutorial-main' folder you have downloaded and extracted. Once there, use the following command to change the permissions on the BLAST program files (Note: you may need user [access](https://en.wikipedia.org/wiki/Computer_access_control) to change the file permissions).
 
 ```
 chmod -R 0777 DBTCShinyTutorial-main
@@ -64,16 +64,15 @@ For Mac OS another issue may arise where the BLAST software is not recognized as
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2b567c20-9856-42ef-9619-de2a410eaad0)
 
-
 To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following...
-
-**Right-Click the Application:** Instead of double-clicking to open the file, right-click on the program file.
-
-**Choose Open:** From the context menu that appears after right-clicking, choose "Open." This action should present you with an option to open the file even though it's from an unidentified developer.
-
-**Open Anyway:** After selecting "Open," macOS will display a warning dialog stating that the application cannot be opened because it's from an unidentified developer. In this dialog, there should be an "Open Anyway" button. Click on this button to bypass the warning and open the program file.
-
-**Confirm Your Choice:** You may need to enter your administrator password or confirm your choice before macOS allows the file to be opened. Follow the on-screen prompts to complete this step.
+    
+    **Right-Click the Application:** Instead of double-clicking to open the file, right-click on the program file.
+    
+    **Choose Open:** From the context menu that appears after right-clicking, choose "Open." This action should present you with an option to open the file even though it's from an unidentified developer.
+    
+    **Open Anyway:** After selecting "Open," macOS will display a warning dialog stating that the application cannot be opened because it's from an unidentified developer. In this dialog, there should be an "Open Anyway" button. Click on this button to bypass the warning and open the program file.
+    
+    **Confirm Your Choice:** You may need to enter your administrator password or confirm your choice before macOS allows the file to be opened. Follow the on-screen prompts to complete this step.
 
 Once complete the program should be usable (Note: the process to indicate that this is a trusted program may need to be completed with every MacOS session). Rerun the DBTCShiny and attempt your analysis again.
 
