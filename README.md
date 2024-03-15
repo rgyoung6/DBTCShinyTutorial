@@ -74,8 +74,7 @@ To allow the computer to run makeblastdb as a trusted program you will need to n
 
 **Confirm Your Choice:** You may need to enter your administrator password or confirm your choice before macOS allows the file to be opened. Follow the on-screen prompts to complete this step.
 
-Once complete the program should be usable. Rerun the DBTCShiny and attempt your analysis again.
-
+Once complete the program should be usable (Note: the process to indicate that this is a trusted program may need to be completed with every MacOS session). Rerun the DBTCShiny and attempt your analysis again.
 
 ([Back to Top](#table-of-contents))
 
