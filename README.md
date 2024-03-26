@@ -158,7 +158,7 @@ And Finally, we will select one of the fastq files. Note: that these files are c
 
 ### Primer File
 
-The second button is the Primer File button. Again, once selected it will bring up a select file dialog window.
+The second button is the **Primer File button and this option will be utilized for this tutorial**. Again, once selected it will bring up a select file dialog window (Note: if this button is not utilized or the selection is cancelled then the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function will run without the use of a primer file and primer matching and trimming).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/715e6051-50b4-4687-9d02-3cc141ee1464)
 
@@ -261,14 +261,14 @@ The third field is the trim merged reads field. If set to TRUE, this field will 
 
 The final field provides an input value for the final total length of the reads coming out of the analysis. This value is set as a default value of 100 and can be adjusted depending on the expected length of the reads based on the molecular primers. **The tutorial will use the default value of 100.**
 
-At the bottom of this section there is a button labeled 'Dada Submit'. Clicking this button will initiate the running of the dada_implement() function.
+At the bottom of this section there is a button labeled 'Dada Submit'. Clicking this button will initiate the running of the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function.
 
 ([Back to Top](#table-of-contents))
 
 ## Dada Implement Function Output
 
 ### Quality Plot Folders
-The output from the dada_implement() function can include up to four file folders in each of the Run folders submitted. In our example we are missing the output folder 'A_Qual' and 'C_FiltQual' as we selected FALSE for the [print quality plots](https://github.com/rgyoung6/DBTCShinyTutorial?tab=readme-ov-file#print-quality-plots) option. If this was set to TRUE then there would be two additional folders with plots displaying the quality metrics of each of the raw (in folder 'A_Qual') and filtered and trimmed (in folder 'C_FiltQual') results.
+The output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function can include up to four file folders in each of the Run folders submitted. In our example we are missing the output folder 'A_Qual' and 'C_FiltQual' as we selected FALSE for the [print quality plots](https://github.com/rgyoung6/DBTCShinyTutorial?tab=readme-ov-file#print-quality-plots) option. If this was set to TRUE then there would be two additional folders with plots displaying the quality metrics of each of the raw (in folder 'A_Qual') and filtered and trimmed (in folder 'C_FiltQual') results.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/ce957e29-a39c-4f2e-8fa3-69626a6fd626)
 
@@ -367,7 +367,7 @@ There are no data files from previous DBTCShiny elements that lead into this fun
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0b863ce6-4980-4b69-83fd-30b63c2077c2)
 
 
-For this tutorial there are two preassembled fasta files. The 
+For this tutorial there is a single fasta file example for the use of the [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db)
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3be0acc8-d8d5-4c85-948e-5f6f14564221)
 
