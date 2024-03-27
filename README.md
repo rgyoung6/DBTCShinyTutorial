@@ -368,17 +368,18 @@ The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#m
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0b863ce6-4980-4b69-83fd-30b63c2077c2)
 
-a
-For this tutorial there is a single fasta file (2024_01_05_COI-5P_393_Species_of_Concern.fas) example and three folders each containing the program file for the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program for different platforms. The species of concern sequences contained in this fasta example file includes available sequence data for the COI-5P molecular region (the molecular region for the data in question) for all insect taxa on the [CFIA list of invasive and regulated pests](https://inspection.canada.ca/plant-health/invasive-species/regulated-pests/eng/1363317115207/1363317187811). These data were obtained form the [Barcode of Life Datasystems](https://www.boldsystems.org/index.php) and [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/) databases through use of [MACER](https://github.com/rgyoung6/MACER). (NOTE: there are two databases utilized later in the DBTCShiny tutorial but only one example of how to create databases was provided here).
+The first element is the Fasta File selection Button. Once clicked it will again bring up a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Navigate to the tutorial folder 'C-MakeDB'. For this tutorial there is a single fasta file example (2024_01_05_COI-5P_393_Species_of_Concern.fas) and three folders each containing the program file for the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program for different platforms. The species of concern sequences contained in this fasta example file includes available sequence data for the COI-5P molecular region (the molecular region for the data in question) for all insect taxa on the [CFIA list of invasive and regulated pests](https://inspection.canada.ca/plant-health/invasive-species/regulated-pests/eng/1363317115207/1363317187811). These data were obtained form the [Barcode of Life Datasystems](https://www.boldsystems.org/index.php) and [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/) databases through use of [MACER](https://github.com/rgyoung6/MACER). (NOTE: there are two databases utilized later in the DBTCShiny tutorial but only one example of how to create databases was provided here).
+
+**Select the fasta file example (2024_01_05_COI-5P_393_Species_of_Concern.fas).**
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b51d5511-10b3-4372-a4c5-918301856233)
 
 
+After selection your file path will appear on the DBTCShiny dashboard. The next element is the 'Make BLAST Location' button. If this button is selected, or if the file selection fo rthis button is cancelled without selection the program will run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer. If htis is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms. To utilized these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have (permissions](Permissions)
 
-Files in Folder
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/8a27868a-8256-483c-848d-430cc1767a9b)
 
+The 
 
 
 # References 
