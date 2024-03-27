@@ -377,7 +377,7 @@ The first element is the Fasta File selection Button. Once clicked it will again
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b51d5511-10b3-4372-a4c5-918301856233)
 
 
-After selection your file path will appear on the DBTCShiny dashboard. The next element is the 'Make BLAST Location' button. If this button is selected, or if the file selection fo rthis button is cancelled without selection the program will run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer. If htis is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms. To utilized these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have (permissions](#Permissions)
+After selection your file path will appear on the DBTCShiny dashboard. The next element is the 'Make BLAST Location' button. If this button is selected, or if the file selection fo rthis button is cancelled without selection the program will run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer. If htis is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms. To utilized these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have [permissions](#Permissions)
 
 
 
