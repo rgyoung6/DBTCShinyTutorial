@@ -358,6 +358,8 @@ The [combine_dada_output()](https://github.com/rgyoung6/DBTCShiny/blob/main/READ
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/e9b7c9fb-27f8-4d03-927c-8ba3c061882b)
 
+([Back to Top](#table-of-contents))
+
 # Make a BLAST Database
 
 There are no data files from previous DBTCShiny elements that lead into this function. Instead, an externally created fasta file is necessary to establish a custom BLASTable database. This file can be manually created or can more effectively and efficiently created through the use of the [MACER GitHub](https://github.com/rgyoung6/MACER) package. In either instance the final format must be in the MACER format (see below).
@@ -375,11 +377,13 @@ The first element is the Fasta File selection Button. Once clicked it will again
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b51d5511-10b3-4372-a4c5-918301856233)
 
 
-After selection your file path will appear on the DBTCShiny dashboard. The next element is the 'Make BLAST Location' button. If this button is selected, or if the file selection fo rthis button is cancelled without selection the program will run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer. If htis is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms. To utilized these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have (permissions](Permissions)
+After selection your file path will appear on the DBTCShiny dashboard. The next element is the 'Make BLAST Location' button. If this button is selected, or if the file selection fo rthis button is cancelled without selection the program will run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer. If htis is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms. To utilized these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have (permissions](#Permissions)
 
 
 
 The 
+
+([Back to Top](#table-of-contents))
 
 
 # References 
