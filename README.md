@@ -64,7 +64,7 @@ For Mac OS another issue may arise where the BLAST software is not recognized as
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2b567c20-9856-42ef-9619-de2a410eaad0)
 
-To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following...
+To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following
     
     **Right-Click the Application:** Instead of double-clicking to open the file, right-click on the program file.
     
