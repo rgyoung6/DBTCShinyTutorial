@@ -364,10 +364,12 @@ There are no data files from previous DBTCShiny elements that lead into this fun
 
 - The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
 
+The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) shiny page looks like this and there are five potential elements to complete before running the function.
+
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0b863ce6-4980-4b69-83fd-30b63c2077c2)
 
-
-For this tutorial there is a single fasta file (2024_01_05_COI-5P_393_Species_of_Concern.fas) example for the use of the [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) and three folders each containing the program file for the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb. The species of concern sequences contained in this fasta example file includes available sequence data for the COI-5P molecular region (the molecular region for the data in question) for all insect taxa on the [CFIA list of invasive and regulated pests](https://inspection.canada.ca/plant-health/invasive-species/regulated-pests/eng/1363317115207/1363317187811). These data weer obtained form the [Barcode of Life Datasystems](https://www.boldsystems.org/index.php) and [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/) databases through use of [MACER](https://github.com/rgyoung6/MACER).
+a
+For this tutorial there is a single fasta file (2024_01_05_COI-5P_393_Species_of_Concern.fas) example and three folders each containing the program file for the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program for different platforms. The species of concern sequences contained in this fasta example file includes available sequence data for the COI-5P molecular region (the molecular region for the data in question) for all insect taxa on the [CFIA list of invasive and regulated pests](https://inspection.canada.ca/plant-health/invasive-species/regulated-pests/eng/1363317115207/1363317187811). These data were obtained form the [Barcode of Life Datasystems](https://www.boldsystems.org/index.php) and [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/) databases through use of [MACER](https://github.com/rgyoung6/MACER). (NOTE: there are two databases utilized later in the DBTCShiny tutorial but only one example of how to create databases was provided here).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b51d5511-10b3-4372-a4c5-918301856233)
 
