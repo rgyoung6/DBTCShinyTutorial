@@ -37,7 +37,7 @@ Before using these files and working through this tutorial please install the [D
       - [Next Step Data Files](#next-step-data-files)
 - [Combine Dada Output](#combine-dada-output)
 - [Make a BLAST Database](#Make-a-blast-database)
-- [Sequence BLAST](#sequence-blast)
+- [BLAST Sequences](#blast-sequences)
 - [Taxon Assignment](#taxon-assignment)
 - [Combine Assignment Output](#combine-assignment-output)
 - [Reduce Taxa](#reduce-taxa)
@@ -378,9 +378,44 @@ The first element is the Fasta File selection Button. Once clicked it will again
 
 Once selected the file path will appear on the DBTCShiny dashboard. 
 
-The next element is the 'Make BLAST Location' button. If this button is selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable)). If this is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have [permissions](#Permissions)
+The next element is the 'Make BLAST Location' button. If this button is not selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable)). If this is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have [permissions](#Permissions)
 
-The button for this function will open a third [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window where you will need to selected the previously downloaded version of the 'accessionTaxa.sql' data base file 
+The 'Select the NCBI Taxon Database File' button for this function will open a third [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results).
+
+There are then two fillable fields. The first accepts numeric value indicating the minimum lenght of the sequence in nucleotides to include in the constructed database. 
+
+The second fillable field accepts alpha numeric values. This field should be filled with a short (2 to 10 character) string to designate the database you are going to construct. 
+
+Finally using the 'Create BLAST Database Submit' button will initiate the program. 
+
+([Back to Top](#table-of-contents))
+
+# BLAST Sequences
+
+([Back to Top](#table-of-contents))
+
+
+# Taxon Assign
+
+([Back to Top](#table-of-contents))
+
+
+# Combine Taxa Assign
+
+([Back to Top](#table-of-contents))
+
+
+
+# Reduce Taxa Assign
+
+([Back to Top](#table-of-contents))
+
+
+# Combine Reduced Taxon Assign
+
+([Back to Top](#table-of-contents))
+
+# Combine Reduced Taxon Assign
 
 ([Back to Top](#table-of-contents))
 
