@@ -38,10 +38,11 @@ Before using these files and working through this tutorial please install the [D
 - [Combine Dada Output](#combine-dada-output)
 - [Make a BLAST Database](#Make-a-blast-database)
 - [BLAST Sequences](#blast-sequences)
-- [Taxon Assignment](#taxon-assignment)
-- [Combine Assignment Output](#combine-assignment-output)
-- [Reduce Taxa](#reduce-taxa)
-- [Combine Reduced Output](#combine-reduced-output)
+- [Taxon Assign](#taxon-assign)
+- [Combine Taxon Assign](#combine-taxon-assign)
+- [Reduce Taxa Assign](#reduce-taxa-assign)
+- [Combine Reduced Taxon Assign](#combine-reduced-taxon-assign)
+- [Mapping Dashboard](#mapping-dashboard)
 - [References](#references)
 
 # Data 
@@ -415,7 +416,7 @@ Finally using the 'Create BLAST Database Submit' button will initiate the progra
 
 ([Back to Top](#table-of-contents))
 
-# Combine Reduced Taxon Assign
+# Mapping Dashboard
 
 ([Back to Top](#table-of-contents))
 
