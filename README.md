@@ -362,7 +362,7 @@ The [combine_dada_output()](https://github.com/rgyoung6/DBTCShiny/blob/main/READ
 
 # Make a BLAST Database
 
-There are no data files from previous DBTCShiny elements that lead into this function. Instead, an externally created fasta file is necessary to establish a custom BLASTable database. This file can be manually created or can more effectively and efficiently created through the use of the [MACER GitHub](https://github.com/rgyoung6/MACER) package. In either instance the final format must be in the MACER format (see below).
+There are no data files from previous DBTCShiny elements that lead into this function. Instead, an externally created fasta file is necessary to establish a custom BLASTable database. This file can be manually created or can more effectively and efficiently created through the use of the [MACER](https://github.com/rgyoung6/MACER) package. In either instance the final format must be in the MACER format (see below).
 
 - The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
 
@@ -370,18 +370,17 @@ The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#m
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0b863ce6-4980-4b69-83fd-30b63c2077c2)
 
-The first element is the Fasta File selection Button. Once clicked it will again bring up a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Navigate to the tutorial folder 'C-MakeDB'. For this tutorial there is a single fasta file example (2024_01_05_COI-5P_393_Species_of_Concern.fas) and three folders each containing the program file for the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program for different platforms. The species of concern sequences contained in this fasta example file includes available sequence data for the COI-5P molecular region (the molecular region for the data in question) for all insect taxa on the [CFIA list of invasive and regulated pests](https://inspection.canada.ca/plant-health/invasive-species/regulated-pests/eng/1363317115207/1363317187811). These data were obtained form the [Barcode of Life Datasystems](https://www.boldsystems.org/index.php) and [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/) databases through use of [MACER](https://github.com/rgyoung6/MACER). (NOTE: there are two databases utilized later in the DBTCShiny tutorial but only one example of how to create databases was provided here).
+The first element is the Fasta File selection Button. Once clicked it will again bring up a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Navigate to the tutorial folder 'C-MakeDB'. For this tutorial there is a single fasta file example (2024_01_05_COI-5P_393_Species_of_Concern.fas) and three folders each containing the program file for the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program for different platforms. The species of concern sequences contained in this fasta example file includes available sequence data for the COI-5P molecular region (the molecular region for the data in question) for all insect taxa on the [CFIA list of invasive and regulated pests](https://inspection.canada.ca/plant-health/invasive-species/regulated-pests/eng/1363317115207/1363317187811). These data were obtained from the [Barcode of Life Datasystems](https://www.boldsystems.org/index.php) and [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/) databases using [MACER](https://github.com/rgyoung6/MACER). (NOTE: there are two databases utilized later in the DBTCShiny tutorial but only one example of how to create databases was provided here).
 
 **Select the fasta file example (2024_01_05_COI-5P_393_Species_of_Concern.fas).**
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b51d5511-10b3-4372-a4c5-918301856233)
 
+Once selected the file path will appear on the DBTCShiny dashboard. 
 
-After selection your file path will appear on the DBTCShiny dashboard. The next element is the 'Make BLAST Location' button. If this button is selected, or if the file selection fo rthis button is cancelled without selection the program will run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer. If htis is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms. To utilized these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have [permissions](#Permissions)
+The next element is the 'Make BLAST Location' button. If this button is selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable)). If this is not the case then the program will need to be selected. For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure you have [permissions](#Permissions)
 
-
-
-The 
+The button for this function will open a third [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window where you will need to selected the previously downloaded version of the 'accessionTaxa.sql' data base file 
 
 ([Back to Top](#table-of-contents))
 
