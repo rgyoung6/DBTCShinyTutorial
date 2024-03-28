@@ -363,7 +363,7 @@ The [combine_dada_output()](https://github.com/rgyoung6/DBTCShiny/blob/main/READ
 
 # Make a BLAST Database
 
-There are no data files from previous DBTCShiny elements that lead into this function. Instead, an externally created fasta file is necessary to establish a custom BLASTable database. This file can be manually created or can be more effectively and efficiently created through the use of the [MACER](https://github.com/rgyoung6/MACER) package. In either instance the final format must be in the MACER format (see below).
+There are no data files from previous DBTCShiny elements that lead into the  [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) function. Instead, an externally created fasta file is necessary to establish a custom BLASTable database. This file can be manually created or can be more effectively and efficiently created through the use of the [MACER](https://github.com/rgyoung6/MACER) package. In either instance the final format must be in the MACER format (see below).
 
 - The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
 
@@ -398,6 +398,13 @@ Finally using the 'Create BLAST Database Submit' button will initiate the progra
 ([Back to Top](#table-of-contents))
 
 # BLAST Sequences
+
+The [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function has three buttons and three fillable fields. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2284eb81-552c-408b-9f64-6473c81d6644)
+
+The 'Database File' button 
+
 
 ([Back to Top](#table-of-contents))
 
