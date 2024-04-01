@@ -65,7 +65,7 @@ For Mac OS another issue may arise where the BLAST software is not recognized as
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2b567c20-9856-42ef-9619-de2a410eaad0)
 
-To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following...
+To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following...
     
   **Right-Click the Application:** Instead of double-clicking to open the file, right-click on the program file.
   
@@ -367,7 +367,7 @@ There are no data files from previous DBTCShiny elements that lead into the  [ma
 
 - The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
 
-The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) shiny page has five elements. The first element is the 'Fasta File' selection button. Once clicked this button will again bring up a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window.  
+The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) shiny page has five elements. The first element is the 'Fasta File' selection button. Once clicked this button will again bring up a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window.  
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/08dabbcc-695e-4eb9-92ef-28bb0c86aded)
 
@@ -379,9 +379,9 @@ The next element is the 'Make BLAST Location' button. If this button is not sele
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/104e5610-dc4b-4bf3-bfc6-60b1370d4acc)
 
-For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure the program files have [permissions](#Permissions)
+For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure the program files have [permissions](#Permissions)
 
-The 'Select the NCBI Taxon Database File' button for this function will open a third [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results).
+The 'Select the NCBI Taxon Database File' button for this function will open a third [finder](https://en.wikipedia.org/wiki/Finder_(software)) window where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/353fd132-891d-4ca3-b221-97f22c729ba7)
 
@@ -403,7 +403,7 @@ The [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequenc
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2284eb81-552c-408b-9f64-6473c81d6644)
 
-The 'Database File' button 
+The 'Database File' button will launch a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window 
 
 
 ([Back to Top](#table-of-contents))
