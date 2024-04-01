@@ -375,23 +375,23 @@ Navigate to the tutorial folder 'C-MakeDB'. For this tutorial there is a single 
 
 Note: The species of concern sequences fasta file contains sequence data for the COI-5P molecular region for all insect taxa on the [CFIA list of invasive and regulated pests](https://inspection.canada.ca/plant-health/invasive-species/regulated-pests/eng/1363317115207/1363317187811). These data were obtained from the [Barcode of Life Datasystems](https://www.boldsystems.org/index.php) and [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/) databases using [MACER](https://github.com/rgyoung6/MACER).
 
-The next element is the 'Make BLAST Location' button. If this button is not selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable))). If the program is not in the computers path then the appropriate makeblastdb program file needs to be selected for the computers operating system (See image of files below).
+The next element is the 'makeblastdb Location' button. If this button is not selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable))). If the program is not in the computers path then the appropriate makeblastdb program file needs to be selected for the computers operating system (See image of files below).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/104e5610-dc4b-4bf3-bfc6-60b1370d4acc)
 
 For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [finder](https://en.wikipedia.org/wiki/Finder_(software)) window, but remember to ensure the program files have [permissions](#Permissions)
 
-The 'Select the NCBI Taxon Database File' button for this function will open a third [finder](https://en.wikipedia.org/wiki/Finder_(software)) window where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results).
+The 'Select the NCBI Taxon Database File' button for this function will open a third [finder](https://en.wikipedia.org/wiki/Finder_(software)) window where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results)).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/353fd132-891d-4ca3-b221-97f22c729ba7)
 
-There are then two fillable fields. 
+There are then two fillable fields required for the final elements of the [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) function. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3da9d910-7bab-4aad-9a26-325f956a1866)
 
-The first accepts a numeric value indicating the minimum length of the sequences in nucleotides to include in the constructed database. 
+The first fillable field is the minimum length of the sequence (in nucleotides) for records that will be included in the constructed database.  
 
-The second fillable field accepts alpha numeric values. This field should be filled with a short (2 to 10 character) string to designate the database you are going to construct. 
+The second fillable field accepts alpha numeric values. This field should be filled with a short (2 to 10 character) string as a unique identifier for the database you are going to construct. 
 
 Finally using the 'Create BLAST Database Submit' button will initiate the program. 
 
@@ -403,7 +403,13 @@ The [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequenc
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2284eb81-552c-408b-9f64-6473c81d6644)
 
-The 'Database File' button will launch a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window 
+The 'Database File' button will launch a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Using this window, the user is required to select a file inside a constructed BLAST formatted database (See image below of files contained in a BLAST formatted databas). Any one of the files in this database can be selected.
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6b4187b7-7a02-43cb-bda2-0f17a4814ab4)
+
+The next element is the 'BLASTn Location' button. If this button is not selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) blastn program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable))). If the program is not in the computers path then the appropriate blastn program file needs to be selected for the computers operating system (See image of files below).
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/80332e21-c574-4de0-8f91-3e7a79a874a4)
 
 
 ([Back to Top](#table-of-contents))
