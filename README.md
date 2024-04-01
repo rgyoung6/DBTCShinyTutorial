@@ -413,17 +413,33 @@ The next element is the 'BLASTn Location' button. If this button is not selected
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9e910efe-2826-4a1a-aaa6-aa7e136b8670)
 
-The final button is the Query Fasta File button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where the user will need to select a [Fasta](https://en.wikipedia.org/wiki/FASTA_format) the file of interest to BLAST against the selected database. 
+The final button is the Query Fasta File button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where the user will need to select a [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file of interest to BLAST against the selected database. **For this tutorial the user should select the 2024_02_14_0409_combineDada.fas file.** (See image below). 
 
 **NOTE:** In this tutorial example there is a single [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file in the 'D-BLAST' folder. However, the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function will process all [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files in the selected location BLASTing them against the indicated BLAST database. Also, if this fasta has [paired ASV-fasta](#asvfasta) data, this will be recombined with the BLAST results using the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment) function.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/80332e21-c574-4de0-8f91-3e7a79a874a4)
 
+Finally, there are three fillable fields wih arguments for this function (See image below). The first fillable field accepts a numerical input. This value indicates the maximum number of returned results that will be saved to the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) output file In cases where there is a small BLAST formatted database the results will not reach the maximum indicated here. However, it is more than likely that all sequences queried against very large databases, such as the NCBI GenBank nucleotide database, will all have the maximum number of returned results. **For this tutorial we will use the default of 200 as our BLAST database is small with known clean data recors so this value will easily saturate the results with matches to high quality data.**
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/58e22af1-889e-4273-bf73-fd838d0c19ff)
+
+The second fillable field also accepts a numeric value for the minimum length of sequence used in the submitted [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file to BLAST against the indicated database (Note: the smaller the length the more computationally demanding the BLAST). This value is usually set to a known value close to the expected fragement size of the data submitted to the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function. **For this tutorial we will use the default value of 100.**
+
+Finally, the third fillable field also accepts a numeric value indicating the total number of computer cores to utilize when running the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
 
 ([Back to Top](#table-of-contents))
 
 
 # Taxon Assign
+
+The [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function 
+
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9a7f9c64-f4e1-44b9-999c-a361604fd119)
+
+
+
+
 
 ([Back to Top](#table-of-contents))
 
