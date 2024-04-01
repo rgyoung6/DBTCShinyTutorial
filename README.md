@@ -37,11 +37,12 @@ Before using these files and working through this tutorial please install the [D
       - [Next Step Data Files](#next-step-data-files)
 - [Combine Dada Output](#combine-dada-output)
 - [Make a BLAST Database](#Make-a-blast-database)
-- [Sequence BLAST](#sequence-blast)
-- [Taxon Assignment](#taxon-assignment)
-- [Combine Assignment Output](#combine-assignment-output)
-- [Reduce Taxa](#reduce-taxa)
-- [Combine Reduced Output](#combine-reduced-output)
+- [BLAST Sequences](#blast-sequences)
+- [Taxon Assign](#taxon-assign)
+- [Combine Taxon Assign](#combine-taxon-assign)
+- [Reduce Taxa Assign](#reduce-taxa-assign)
+- [Combine Reduced Taxon Assign](#combine-reduced-taxon-assign)
+- [Mapping Dashboard](#mapping-dashboard)
 - [References](#references)
 
 # Data 
@@ -54,7 +55,7 @@ To download the data for the tutorial go to the main [DBTCShinyTutorial](https:/
 
 ## Permissions 
 
-Also, please make sure that you have [permissions](https://en.wikipedia.org/wiki/File-system_permissions) for this location so that the files will be accessible for reading, the folders for writing data, and that the blastn and makeblastdb files are able to be executed (if you are using these program files instead of loading the programs as trusted software into your system). For Linux [terminal](https://en.wikipedia.org/wiki/Linux#User_interface) and Mac OS [terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) open a terminal window and navigate to the container holding the 'DBTCShinyTutorial-main' folder you have downloaded and extracted. Once there use the following command to change the permissions on the BLAST program files (Note: you may user [access](https://en.wikipedia.org/wiki/Computer_access_control) to change the file permissions).
+Also, please make sure that you have [permissions](https://en.wikipedia.org/wiki/File-system_permissions) for this location so that the files will be accessible for reading, the folders for writing data, and that the blastn and makeblastdb files are able to be executed (if you are using these program files instead of loading the programs as trusted software into your system). For Windows, it is not often a problem to run these programs. For Linux [terminal](https://en.wikipedia.org/wiki/Linux#User_interface) and Mac OS [terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) open a terminal window and navigate to the container holding the 'DBTCShinyTutorial-main' folder you have downloaded and extracted. Once there, use the following command to change the permissions on the BLAST program files (Note: you may need user [access](https://en.wikipedia.org/wiki/Computer_access_control) to change the file permissions).
 
 ```
 chmod -R 0777 DBTCShinyTutorial-main
@@ -62,17 +63,17 @@ chmod -R 0777 DBTCShinyTutorial-main
 
 For Mac OS another issue may arise where the BLAST software is not recognized as a trusted program. 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/8ef3307a-517d-4bf7-8c62-c1e6e53c477a)
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2b567c20-9856-42ef-9619-de2a410eaad0)
 
-To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [Finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following...
-
-**Right-Click the Application:** Instead of double-clicking to open the file, right-click on the program file.
-
-**Choose Open:** From the context menu that appears after right-clicking, choose "Open." This action should present you with an option to open the file even though it's from an unidentified developer.
-
-**Open Anyway:** After selecting "Open," macOS will display a warning dialog stating that the application cannot be opened because it's from an unidentified developer. In this dialog, there should be an "Open Anyway" button. Click on this button to bypass the warning and open the program file.
-
-**Confirm Your Choice:** You may need to enter your administrator password or confirm your choice before macOS allows the file to be opened. Follow the on-screen prompts to complete this step.
+To allow the computer to run makeblastdb as a trusted program you will need to navigate to the 'DBTCShinyTutorial-main' in a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Once there go to the file of choice (makeblastdb or blastn) and do the following...
+    
+  **Right-Click the Application:** Instead of double-clicking to open the file, right-click on the program file.
+  
+  **Choose Open:** From the context menu that appears after right-clicking, choose "Open." This action should present you with an option to open the file even though it's from an unidentified developer.
+  
+  **Open Anyway:** After selecting "Open," macOS will display a warning dialog stating that the application cannot be opened because it's from an unidentified developer. In this dialog, there should be an "Open Anyway" button. Click on this button to bypass the warning and open the program file.
+  
+  **Confirm Your Choice:** You may need to enter your administrator password or confirm your choice before macOS allows the file to be opened. Follow the on-screen prompts to complete this step.
 
 Once complete the program should be usable (Note: the process to indicate that this is a trusted program may need to be completed with every MacOS session). Rerun the DBTCShiny and attempt your analysis again.
 
@@ -117,7 +118,7 @@ The side panel (left side of the screen) of DBTCShiny contains two options in ad
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/60310743-9135-448e-bba6-291de9b2eea3)
 
-Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'select file dialog window'). 
+Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window <a id="selectfiledialogwindow"></a> (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as a 'select file dialog window'). 
 
 Finally, before moving on be sure that you have the tutorial data downloaded and stored on your local machine (see here if unsure [Data](#data)).
 
@@ -134,7 +135,7 @@ This section provides file locations, processing, and saving options for the Dad
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0f55cd3d-3cea-4faa-bdb8-fc7ada037e79)
 
-Once clicked this button will open a select file dialog window to select the data files to process. 
+Once clicked this button will open a [select file dialog window](#selectfiledialogwindow) to select the data files to process. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/23a899c0-514b-4546-84d0-8115ab87e0eb)
 
@@ -158,7 +159,7 @@ And Finally, we will select one of the fastq files. Note: that these files are c
 
 ### Primer File
 
-The second button is the Primer File button. Again, once selected it will bring up a select file dialog window.
+The second button is the **Primer File button and this option will be utilized for this tutorial**. Again, once selected it will bring up a [select file dialog window](#selectfiledialogwindow) (Note: if this button is not utilized or the selection is cancelled then the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function will run without the use of a primer file and primer matching and trimming).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/715e6051-50b4-4687-9d02-3cc141ee1464)
 
@@ -261,14 +262,14 @@ The third field is the trim merged reads field. If set to TRUE, this field will 
 
 The final field provides an input value for the final total length of the reads coming out of the analysis. This value is set as a default value of 100 and can be adjusted depending on the expected length of the reads based on the molecular primers. **The tutorial will use the default value of 100.**
 
-At the bottom of this section there is a button labeled 'Dada Submit'. Clicking this button will initiate the running of the dada_implement() function.
+At the bottom of this section there is a button labeled 'Dada Submit'. Clicking this button will initiate the running of the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function.
 
 ([Back to Top](#table-of-contents))
 
 ## Dada Implement Function Output
 
 ### Quality Plot Folders
-The output from the dada_implement() function can include up to four file folders in each of the Run folders submitted. In our example we are missing the output folder 'A_Qual' and 'C_FiltQual' as we selected FALSE for the [print quality plots](https://github.com/rgyoung6/DBTCShinyTutorial?tab=readme-ov-file#print-quality-plots) option. If this was set to TRUE then there would be two additional folders with plots displaying the quality metrics of each of the raw (in folder 'A_Qual') and filtered and trimmed (in folder 'C_FiltQual') results.
+The output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function can include up to four file folders in each of the Run folders submitted. In our example we are missing the output folder 'A_Qual' and 'C_FiltQual' as we selected FALSE for the [print quality plots](https://github.com/rgyoung6/DBTCShinyTutorial?tab=readme-ov-file#print-quality-plots) option. If this was set to TRUE then there would be two additional folders with plots displaying the quality metrics of each of the raw (in folder 'A_Qual') and filtered and trimmed (in folder 'C_FiltQual') results.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/ce957e29-a39c-4f2e-8fa3-69626a6fd626)
 
@@ -350,7 +351,7 @@ Most of the files generated by the [dada_implement()](https://github.com/rgyoung
 
 # Combine Dada Output
 
-The output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function includes the [paired ASV-fasta](#asvfasta) data files. Where more than one sequence [run](#runs) has been completed for a given project, it is often helpful or needed to combine the data from the different runs into a single data file for further analysis (Note: the files being combined should be from the same molecular protocols). Only the ASV files are required for this combine output function. For the purposes of **this tutorial we are using the 'Run1_Merge.tsv' and the 'Run2_Merge.tsv' files** from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) output. To select these files simply click the 'Select a File in the Target Folder' button and then select file dialog window will open. Navigate to the B-CombineDada folder and then select one of the files in this folder and the function will process all '_Merge.tsv',  '_MergeFwdRev.tsv', and '_Forward.tsv' files into paired ASV-fasta files.
+The output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function includes the [paired ASV-fasta](#asvfasta) data files. Where more than one sequence [run](#runs) has been completed for a given project, it is often helpful or needed to combine the data from the different runs into a single data file for further analysis (Note: the files being combined should be from the same molecular protocols). Only the ASV files are required for this combine output function. For the purposes of **this tutorial we are using the 'Run1_Merge.tsv' and the 'Run2_Merge.tsv' files** from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) output. To select these files simply click the 'Select a File in the Target Folder' button and then a [select file dialog window](#selectfiledialogwindow) will open. Navigate to the B-CombineDada folder and then select one of the files in this folder and the function will process all '_Merge.tsv',  '_MergeFwdRev.tsv', and '_Forward.tsv' files into paired ASV-fasta files.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b4b331c4-0fed-4e63-99cf-e82b9e304d85)
 
@@ -358,22 +359,93 @@ The [combine_dada_output()](https://github.com/rgyoung6/DBTCShiny/blob/main/READ
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/e9b7c9fb-27f8-4d03-927c-8ba3c061882b)
 
+([Back to Top](#table-of-contents))
+
 # Make a BLAST Database
 
-There are no data files from previous DBTCShiny elements that lead into this function. Instead, an externally created fasta file is necessary to establish a custom BLASTable database. This file can be manually created or can more effectively and efficiently created through the use of the [MACER GitHub](https://github.com/rgyoung6/MACER) package. In either instance the final format must be in the MACER format (see below).
+There are no data files from previous DBTCShiny elements that lead into the  [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) function. Instead, an externally created fasta file is necessary to establish a custom BLASTable database. This file can be manually created or can be more effectively and efficiently created through the use of the [MACER](https://github.com/rgyoung6/MACER) package. In either instance the final format must be in the MACER format (see below).
 
 - The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0b863ce6-4980-4b69-83fd-30b63c2077c2)
+The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) shiny page has five elements. The first element is the 'Fasta File' selection button. Once clicked this button will again bring up a [select file dialog window](#selectfiledialogwindow) window.  
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/08dabbcc-695e-4eb9-92ef-28bb0c86aded)
+
+Navigate to the tutorial folder 'C-MakeDB'. For this tutorial there is a single fasta file example (2024_01_05_COI-5P_393_Species_of_Concern.fas) and three folders each containing the program file for the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program for different platforms. **For this tutorial example select the 2024_01_05_COI-5P_393_Species_of_Concern.fas file.**
+
+Note: The species of concern sequences fasta file contains sequence data for the COI-5P molecular region for all insect taxa on the [CFIA list of invasive and regulated pests](https://inspection.canada.ca/plant-health/invasive-species/regulated-pests/eng/1363317115207/1363317187811). These data were obtained from the [Barcode of Life Datasystems](https://www.boldsystems.org/index.php) and [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/) databases using [MACER](https://github.com/rgyoung6/MACER).
+
+The next element is the 'makeblastdb Location' button. If this button is not selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) makeblastdb program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable))). If the program is not in the computers path then the appropriate makeblastdb program file needs to be selected for the computers operating system (See image of files below).
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/104e5610-dc4b-4bf3-bfc6-60b1370d4acc)
+
+For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [select file dialog window](#selectfiledialogwindow), but remember to ensure the program files have [permissions](#Permissions)
+
+The 'Select the NCBI Taxon Database File' button for this function will open a third [select file dialog window](#selectfiledialogwindow) where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results)).
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/353fd132-891d-4ca3-b221-97f22c729ba7)
+
+There are then two fillable fields required for the final elements of the [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) function. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3da9d910-7bab-4aad-9a26-325f956a1866)
+
+The first fillable field is the minimum length of the sequence (in nucleotides) for records that will be included in the constructed database.  
+
+The second fillable field accepts alpha numeric values. This field should be filled with a short (2 to 10 character) string as a unique identifier for the database you are going to construct. 
+
+Finally using the 'Create BLAST Database Submit' button will initiate the program. 
+
+([Back to Top](#table-of-contents))
+
+# BLAST Sequences
+
+The [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function has three buttons and three fillable fields. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2284eb81-552c-408b-9f64-6473c81d6644)
+
+The 'Database File' button will launch a [select file dialog window](#selectfiledialogwindow). Using this window, the user is required to select a file inside a constructed BLAST formatted database (See image below of files contained in a BLAST formatted database). Any one of the files in this database can be selected.
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6b4187b7-7a02-43cb-bda2-0f17a4814ab4)
+
+The next element is the 'BLASTn Location' button. If this button is not selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) blastn program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable))). If the program is not in the computers path then the appropriate blastn program file needs to be selected for the computers operating system (See image of files below).
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9e910efe-2826-4a1a-aaa6-aa7e136b8670)
+
+The final button is the Query Fasta File button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where 
 
 
-For this tutorial there are two preassembled fasta files. The 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3be0acc8-d8d5-4c85-948e-5f6f14564221)
-
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/80332e21-c574-4de0-8f91-3e7a79a874a4)
 
 
-make_BLAST_DB 
+([Back to Top](#table-of-contents))
+
+
+# Taxon Assign
+
+([Back to Top](#table-of-contents))
+
+
+# Combine Taxa Assign
+
+([Back to Top](#table-of-contents))
+
+
+
+# Reduce Taxa Assign
+
+([Back to Top](#table-of-contents))
+
+
+# Combine Reduced Taxon Assign
+
+([Back to Top](#table-of-contents))
+
+# Mapping Dashboard
+
+([Back to Top](#table-of-contents))
+
+
 # References 
 Young, R. G., Milián‐García, Y., Yu, J., Bullas‐Appleton, E., & Hanner, R. H. (2021). Biosurveillance for invasive insect pest species using an environmental DNA metabarcoding approach and a high salt trap collection fluid. Ecology and Evolution, 11(4), 1558-1569.
 
