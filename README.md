@@ -326,7 +326,7 @@ The Dada analysis will assess the fastq files for likely instances of nucleotide
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/c23fd216-b091-4871-826e-6bb09e08711b)
 
-**Run ASV Tables and Paired Fasta Files**
+<a id="asvfasta"></a> **Run ASV Tables and Paired Fasta Files**
 
 The main output from the dada analysis are the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant). files and their associated [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files. There are three potential paired ASV-fasta files, Merged, Forward, and Reverse. As we only selected to run the [Merged](#directional-processing) analysis, **only the merged files are present for this tutorial example**.
 
@@ -339,7 +339,7 @@ The format of the ASV files are tables which, at their most basic, include the s
 
 **TotalTable**
 
-The total table provides the same format as the paired ASV and fasta <a id="asvfasta"></a> main output files. However, all of the data are combined and retained in this output file. Resluts in this file could include Merged, Forward, Reverse, and ChimRemoved qualifiers in the Results column. The Merged, Forward, and Reverse indicate from which analysis the reads were obtained. The ChimRemoved identifier indicates that the dada analysis did not place the associated read in the paired ASV-fasta files as they were assessed as a [chimera](https://en.wikipedia.org/wiki/Chimera_(molecular_biology)) sequencing error.
+The total table provides the same format as the paired [ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant) and [Fasta](https://en.wikipedia.org/wiki/FASTA_format) main output files. However, all of the data are combined and retained in this output file. Resluts in this file could include Merged, Forward, Reverse, and ChimRemoved qualifiers in the Results column. The Merged, Forward, and Reverse indicate from which analysis the reads were obtained. The ChimRemoved identifier indicates that the dada analysis did not place the associated read in the paired ASV-fasta files as they were assessed as a [chimera](https://en.wikipedia.org/wiki/Chimera_(molecular_biology)) sequencing error.
 
 ## Next Step Data Files
 
@@ -367,7 +367,7 @@ There are no data files from previous DBTCShiny elements that lead into the  [ma
 
 - The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
 
-The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) shiny page has five elements. The first element is the 'Fasta File' selection button. Once clicked this button will again bring up a [select file dialog window](#selectfiledialogwindow) window.  
+The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) shiny page has five elements. The first element is the 'Fasta File' selection button. Once clicked this button will again bring up a [select file dialog window](#selectfiledialogwindow).  
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/08dabbcc-695e-4eb9-92ef-28bb0c86aded)
 
@@ -379,7 +379,7 @@ The next element is the 'makeblastdb Location' button. If this button is not sel
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/104e5610-dc4b-4bf3-bfc6-60b1370d4acc)
 
-For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [select file dialog window](#selectfiledialogwindow), but remember to ensure the program files have [permissions](#Permissions)
+For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [select file dialog window](#selectfiledialogwindow), but remember to ensure the program files have [permissions](#Permissions).
 
 The 'Select the NCBI Taxon Database File' button for this function will open a third [select file dialog window](#selectfiledialogwindow) where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results)).
 
@@ -389,9 +389,9 @@ There are then two fillable fields required for the final elements of the [make_
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3da9d910-7bab-4aad-9a26-325f956a1866)
 
-The first fillable field is the minimum length of the sequence (in nucleotides) for records that will be included in the constructed database.  
+The first fillable field is the minimum length of the sequence (in nucleotides) for records that will be included in the constructed database. **For this tutorial the default of 100 is used.**
 
-The second fillable field accepts alpha numeric values. This field should be filled with a short (2 to 10 character) string as a unique identifier for the database you are going to construct. 
+The second fillable field accepts alpha numeric values. This field should be filled with a short (2 to 10 character) string as a unique identifier for the database you are going to construct. As this tutorial doesn't rely on the previous steps, and descriptive naming can be used here. **It is suggested that 'SOCTUT' would work well for this tutorial.**
 
 Finally using the 'Create BLAST Database Submit' button will initiate the program. 
 
@@ -401,9 +401,11 @@ Finally using the 'Create BLAST Database Submit' button will initiate the progra
 
 The [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function has three buttons and three fillable fields. 
 
+**NOTE:** While the DBTCShiny package has been built for the analysis of high-thoughput sequencing results, the BLAST and taxonomic assignment, taxonomic condense, and mapping functions can be utilized with single specimen Sanger sequencing data.
+
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2284eb81-552c-408b-9f64-6473c81d6644)
 
-The 'Database File' button will launch a [select file dialog window](#selectfiledialogwindow). Using this window, the user is required to select a file inside a constructed BLAST formatted database (See image below of files contained in a BLAST formatted database). Any one of the files in this database can be selected.
+The 'Database File' button will launch a [select file dialog window](#selectfiledialogwindow). Using this window, the user is required to select a file inside a constructed BLAST formatted database (See image below of files contained in a BLAST formatted database). **Any one of the files in the BLAST formatted database folder can selected**.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6b4187b7-7a02-43cb-bda2-0f17a4814ab4)
 
@@ -411,9 +413,9 @@ The next element is the 'BLASTn Location' button. If this button is not selected
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9e910efe-2826-4a1a-aaa6-aa7e136b8670)
 
-The final button is the Query Fasta File button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where 
+The final button is the Query Fasta File button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where the user will need to select a [Fasta](https://en.wikipedia.org/wiki/FASTA_format) the file of interest to BLAST against the selected database. 
 
-
+**NOTE:** In this tutorial example there is a single [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file in the 'D-BLAST' folder. However, the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function will process all [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files in the selected location BLASTing them against the indicated BLAST database. Also, if this fasta has [paired ASV-fasta](#asvfasta) data, this will be recombined with the BLAST results using the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment) function.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/80332e21-c574-4de0-8f91-3e7a79a874a4)
 
