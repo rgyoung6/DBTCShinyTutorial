@@ -118,7 +118,7 @@ The side panel (left side of the screen) of DBTCShiny contains two options in ad
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/60310743-9135-448e-bba6-291de9b2eea3)
 
-Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as an 'select file dialog window'). 
+Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window <a id="selectfiledialogwindow"></a> (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as a 'select file dialog window'). 
 
 Finally, before moving on be sure that you have the tutorial data downloaded and stored on your local machine (see here if unsure [Data](#data)).
 
@@ -403,11 +403,17 @@ The [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequenc
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2284eb81-552c-408b-9f64-6473c81d6644)
 
-The 'Database File' button will launch a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Using this window, the user is required to select a file inside a constructed BLAST formatted database (See image below of files contained in a BLAST formatted databas). Any one of the files in this database can be selected.
+The 'Database File' button will launch a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window. Using this window, the user is required to select a file inside a constructed BLAST formatted database (See image below of files contained in a BLAST formatted database). Any one of the files in this database can be selected.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6b4187b7-7a02-43cb-bda2-0f17a4814ab4)
 
 The next element is the 'BLASTn Location' button. If this button is not selected, or if the file selection is cancelled the program will still run and will assume that the [BLAST+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/) blastn program is installed and accessible from all folders on your computer (The program has been added to the computers [path](https://en.wikipedia.org/wiki/PATH_(variable))). If the program is not in the computers path then the appropriate blastn program file needs to be selected for the computers operating system (See image of files below).
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9e910efe-2826-4a1a-aaa6-aa7e136b8670)
+
+The final button is the Query Fasta File button. This will again bring up a [finder](https://en.wikipedia.org/wiki/Finder_(software)) window where 
+
+
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/80332e21-c574-4de0-8f91-3e7a79a874a4)
 
