@@ -413,13 +413,13 @@ The next element is the 'BLASTn Location' button. If this button is not selected
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9e910efe-2826-4a1a-aaa6-aa7e136b8670)
 
-The final button is the Query Fasta File button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where the user will need to select a [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file of interest to BLAST against the selected database. **For this tutorial the user should select the 2024_02_14_0409_combineDada.fas file.** (See image below). 
+The final button is the 'Query Fasta File' button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where the user will need to select a [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file of interest to BLAST against the selected database. **For this tutorial the user should select the 2024_02_14_0409_combineDada.fas file.** (See image below). 
 
 **NOTE:** In this tutorial example there is a single [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file in the 'D-BLAST' folder. However, the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function will process all [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files in the selected location BLASTing them against the indicated BLAST database. Also, if this fasta has [paired ASV-fasta](#asvfasta) data, this will be recombined with the BLAST results using the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment) function.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/80332e21-c574-4de0-8f91-3e7a79a874a4)
 
-Finally, there are three fillable fields wih arguments for this function (See image below). The first fillable field accepts a numerical input. This value indicates the maximum number of returned results that will be saved to the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) output file In cases where there is a small BLAST formatted database the results will not reach the maximum indicated here. However, it is more than likely that all sequences queried against very large databases, such as the NCBI GenBank nucleotide database, will all have the maximum number of returned results. **For this tutorial we will use the default of 200 as our BLAST database is small with known clean data recors so this value will easily saturate the results with matches to high quality data.**
+There are three fillable fields wih arguments for this function (See image below). The first fillable field accepts a numerical input. This value indicates the maximum number of returned results that will be saved to the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) output file In cases where there is a small BLAST formatted database the results will not reach the maximum indicated here. However, it is more than likely that all sequences queried against very large databases, such as the NCBI GenBank nucleotide database, will all have the maximum number of returned results. **For this tutorial we will use the default of 200 as our BLAST database is small with known clean data records so this value will easily saturate the results with matches to high quality data.**
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/58e22af1-889e-4273-bf73-fd838d0c19ff)
 
@@ -436,7 +436,16 @@ The [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9a7f9c64-f4e1-44b9-999c-a361604fd119)
 
-One thing to note is that the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function can process BLAST results with paired fasta files 
+One thing to note is that the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function processes BLAST results with paired fasta files. If [paired ASV-fasta](#asvfasta) are availble in the same location as the '_BLAST' and [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file is location as well, these data will be combined with the taxonomic assignment results from the BLAST and fasta files. 
+
+The first button is the 'Select a file in the location of BLAST and Fasta file' button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where the user will need to select a file in the location where the BLAST and paired [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file are located. **For this tutorial the user should select the any of the files in the E-TaxaAssign folder.** (See image below). 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/48c6a639-3256-431a-95de-00239a5b8c6b)
+
+**NOTE:** In this tutorial example there are two BLAST results paired with a single [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file in the 'E-TaxaAssign' folder. However, the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function will process all BLAST files present if there are paired [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files in the selected location (and will combine the BLAST results with the [paired ASV-fasta](#asvfasta) [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file.
+
+The 'Select the NCBI Taxon Database File' button for this function will open a third [select file dialog window](#selectfiledialogwindow) where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results)).
+
 
 
 
