@@ -432,12 +432,11 @@ Finally, the third fillable field also accepts a numeric value indicating the to
 
 # Taxon Assign
 
-The [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function 
-
+The [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function has two button file selection elements, six fillable fields, and one TRUE/FALSE selection. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9a7f9c64-f4e1-44b9-999c-a361604fd119)
 
-
+One thing to note is that the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function can process BLAST results with paired fasta files 
 
 
 
