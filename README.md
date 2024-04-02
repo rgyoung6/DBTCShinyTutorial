@@ -432,7 +432,7 @@ Finally, the third fillable field also accepts a numeric value indicating the to
 
 # Taxon Assign
 
-The [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function has two button file selection elements, six fillable fields, and one TRUE/FALSE selection. 
+The [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function has two button [select file dialog window](#selectfiledialogwindow) elements, six fillable fields, and one TRUE/FALSE selection. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9a7f9c64-f4e1-44b9-999c-a361604fd119)
 
@@ -448,7 +448,7 @@ The 'Select the NCBI Taxon Database File' button for this function will open a t
 
 The first fillable field accepts a numeric value indicating the total number of computer cores to utilize when running the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
 
-There are then five fillable fields that when changed can alter the results for the taxonomic assignment output files. The first of these two fields contain the nucleotide sequence coverage and identity threshold values. These values represent percentages out of 100 and are in whole numbers for ease of reporting on the output files. The coverage and identity (ident) values are used to filter the BLAST results where only query to library records with higher values then assigned will be used to assess the 'Lowest_Single_Rank_Above_Thres' and 'Lowest_Single_Taxa_Above_Thres' values in the output ASV table (See below for an image of the output table structure and see [here for intrepretation](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment-intrepretation)).
+There are then five fillable fields that when changed can alter the results for the taxonomic assignment output files. The first of these two fields contain the nucleotide sequence coverage and identity threshold values. These values represent percentages out of 100 and are in whole numbers for ease of reporting on the output files. The coverage and identity (ident) values are used to filter the BLAST results where only query to library records with higher values then assigned will be used to assess the 'Lowest_Single_Rank_Above_Thres' and 'Lowest_Single_Taxa_Above_Thres' values in the output ASV table (See below for an image of the output table structure and see [here for explainations of the data columns](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment-intrepretation)).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/4b1dc0b8-8473-4d04-993f-5a3cdc98e18d)
 
