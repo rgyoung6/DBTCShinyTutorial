@@ -454,13 +454,17 @@ There are then five fillable fields that when changed can alter the results for 
 
 The next fillable field accepts a numeric input with values between 0 and 1. The 'propThres' value looks at the taxonomic rank directly below the assessed rank indicated in the 'Final_Rank' and 'Final_Taxa' columns. If the results from the BLAST at the lower taxonomic level had more than the 'propThres' percentage of results in agreement to the 'Final_Taxa' at the 'Final_Rank' but not all were in agreement, then the record in question would be flagged so that the researcher can evaluate the records making up the results at the rank below the assigned rank. This flag would appear in the 'Result_Code' section and would show 'TBAT(0.95)'.
 
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b71b1d48-10f3-46d3-ab74-4c2cb0aaa219)
+
 In the data for this tutorial there were no instances of this occurring, but if we consider the below hypothetical example...
 
 |genus | species |
 |Mordellaria(25,96,97.19,0) | Mordellaria borealis(1,96,99.75,0), Mordellaria serval(24,96,97.19,0)|
 
+| genus | species | 
+| --------------- | --------------- | 
+| Mordellaria(25,96,97.19,0)  | Mordellaria borealis(1,96,99.75,0), Mordellaria serval(24,96,97.19,0)    | 
 
-![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b71b1d48-10f3-46d3-ab74-4c2cb0aaa219)
 
 
 ([Back to Top](#table-of-contents))
