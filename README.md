@@ -456,13 +456,13 @@ The next fillable field accepts a numeric input with values between 0 and 1. The
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b71b1d48-10f3-46d3-ab74-4c2cb0aaa219)
 
-In the data for this tutorial there were no instances of this occurring, but if we consider the below hypothetical example...
+In the data for this tutorial there was an example of this which is highlighted below...
 
 | genus | species | 
 | --------------- | --------------- | 
 | Mordellaria(25,96,97.19,0)  | Mordellaria borealis(1,96,99.75,0), Mordellaria serval(24,96,97.19,0)    | 
 
-If the 
+In this example from the ST BLAST formatted database there will be a TBAT(0.95) flag present in the Reulst_Code column in the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) '_taxaAssign' output file. This flag would be present as the taxonomic assignment of the genus _Mordellaria_, while accurate, was based on results at the species level with two species assignments. However, there was only a single record indicating _Mordellaria borealis_ representing 4% of the returned results meaning that _Mordellaria serval_ represented over the set 'propThres' of 95% which resulted in the flag to inform the researcher that this could be a result needing further consideration. 
 
 ([Back to Top](#table-of-contents))
 
