@@ -458,14 +458,11 @@ The next fillable field accepts a numeric input with values between 0 and 1. The
 
 In the data for this tutorial there were no instances of this occurring, but if we consider the below hypothetical example...
 
-|genus | species |
-|Mordellaria(25,96,97.19,0) | Mordellaria borealis(1,96,99.75,0), Mordellaria serval(24,96,97.19,0)|
-
 | genus | species | 
 | --------------- | --------------- | 
 | Mordellaria(25,96,97.19,0)  | Mordellaria borealis(1,96,99.75,0), Mordellaria serval(24,96,97.19,0)    | 
 
-
+If the 
 
 ([Back to Top](#table-of-contents))
 
