@@ -472,14 +472,25 @@ There are instances where the BLAST does not yeild results for the submitted nuc
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/27ed8314-69bf-49ec-b9fb-3ab6bd5fc572)
 
-([Back to Top](#table-of-contents))
+The final 'Taxon Assign Submit' button will then initiate the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function.
 
+([Back to Top](#table-of-contents))
 
 # Combine Taxa Assign
 
+The [combine_assign_output()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#combine-assignment-output) function takes multiple outputs from the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function representing the same data but with differing taxonomic assignments using different BLAST databases and combining them into a single file. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6cf3295d-ec1f-4164-aae6-f91339c3f353)
+
+The 'Taxa Assign File' button opens a [select file dialog window](#selectfiledialogwindow) where the user will **navigate to the 'F-CombineTaxaAssign' folder and select one of the '_taxaAssign' files**. Note: this function will combine '_taxaAssign' in to combined files as long as they have the same root name.
+
+The only fillable field accepts a numeric value indicating the total number of computer cores to utilize when running the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. If using multiple cores in your analysis please ensure you do not utilize all available cores as there is a need to retain computational capacity for the operating system and R.  **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
+
+Finally, the click the 'Combine Taxa Assign' button to start the function. The output from the [combine_assign_output()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#combine-assignment-output) function is a single '_taxaAssignCombine' file ASV file and a text file with the details of the running of the function. Note: There can be only one set of '_taxaAssign' files in the selected location (meaning another set of '_taxaAssign' with the same root name).
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/33300b82-ebe3-4cd3-a726-9e220ba6c7bc)
+
 ([Back to Top](#table-of-contents))
-
-
 
 # Reduce Taxa Assign
 
