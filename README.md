@@ -494,9 +494,11 @@ Finally, the click the 'Combine Taxa Assign' button to start the function. The o
 
 # Reduce Taxa Assign
 
-The [reduce_taxa()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#reduce-taxa) function will take '_taxaAssignCombine' or '_taxaAssign' files and reduce the taxonomic assignments so that there is a single unique taxa listed. This is essentially taking the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table and creating a taxonomic table. There are two 
+The [reduce_taxa()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#reduce-taxa) function will take '_taxaAssignCombine' or '_taxaAssign' files and reduce the taxonomic assignments so that there is a single unique taxa listed. This is essentially taking the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table and creating a taxonomic table. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/410995b4-79f6-4878-9e95-d5ca74888719)
+
+There are two fields for this function. The first is the 'Taxa Assign File Location' button that opens a [select file dialog window](#selectfiledialogwindow). Navigate to the 
 
 
 ([Back to Top](#table-of-contents))
