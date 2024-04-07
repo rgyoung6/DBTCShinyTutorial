@@ -494,17 +494,20 @@ Finally, the click the 'Combine Taxa Assign' button to start the function. The o
 
 # Reduce Taxa Assign
 
-The [reduce_taxa()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#reduce-taxa) function will take '_taxaAssignCombine' or '_taxaAssign' files and reduce the taxonomic assignments so that there is a single unique taxa listed. This is essentially taking the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table and creating a taxonomic table. 
+The [reduce_taxa()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#reduce-taxa) function will take '_taxaAssignCombine' or '_taxaAssign' files and reduce the taxonomic assignments so that there is a single unique taxa listed. This function works per file and produces a sister '_taxaReduced' file to every '_taxaAssignCombine' or '_taxaAssign' file present in the selected directory. This is essentially taking the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table and creating a taxonomic table. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/410995b4-79f6-4878-9e95-d5ca74888719)
 
-There are two fields for this function. The first is the 'Taxa Assign File Location' button that opens a [select file dialog window](#selectfiledialogwindow). Navigate to the 
+There are two fields for this function. The first is the 'Taxa Assign File Location' button that opens a [select file dialog window](#selectfiledialogwindow). Navigate to the location with your files of interest, **in the case of this tutorial select the 'G-ReduceTaxa' folder and select any file at this location. **
 
+The second field accepts a numeric value indicating the total number of computer cores to utilize when running the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. If using multiple cores in your analysis please ensure you do not utilize all available cores as there is a need to retain computational capacity for the operating system and R.  **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
 
 ([Back to Top](#table-of-contents))
 
 
 # Combine Reduced Taxon Assign
+
+The final central DBTCShiny function is the 
 
 ([Back to Top](#table-of-contents))
 
