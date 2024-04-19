@@ -6,9 +6,9 @@ A step-by-step example on the use of the DBTCShiny package.
 This repository contains the files and instructions to use the DBTCShiny package [rgyoung6/DBTCShiny](https://github.com/rgyoung6/DBTCShiny). The DBTC functions have four main outcomes...
 
   - [Fastq](https://en.wikipedia.org/wiki/FASTQ_format) file processing using Dada in R
-  - Using the Basic Local Alignment Search Tool ([BLAST](https://en.wikipedia.org/wiki/BLAST_(biotechnology))) amplicon sequence variants ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) can be searched against local NCBI or custom libraries
+  - Using the Basic Local Alignment Search Tool ([BLAST](https://en.wikipedia.org/wiki/BLAST_(biotechnology))) amplicon sequence variants ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) can be searched against local NCBI or custom sequence databases
   - Assign taxa to the unique reads using NCBI taxon database through taxa names and/or taxaID's
-  - Condense the resulting ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) taxonomic assignment tables to unique taxa with the ability to combine datasets (using different sequence libraries for the same reads, or results from the same samples for different molecular regions) into a combined results table
+  - Condense the resulting ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) taxonomic assignment tables to unique taxa with the ability to combine datasets (using different sequence databases for the same reads, or results from the same samples for different molecular regions) into a combined results table
 
 Before using these files and working through this tutorial please install the [DBTCShiny](https://github.com/rgyoung6/DBTCShiny) package.
 
@@ -81,9 +81,9 @@ Once complete the program should be usable (Note: the process to indicate that t
 
 # Initial Considerations
 
-When working with the DBTCShiny applicaiton there are some limitations. The functions in the package make use of several external resources and programs. The programs do not work well when there is white space in the naming conventions of files and directories. As such it is reccommended that when using DBTCShiny, working files and folders be as close to the [root](https://en.wikipedia.org/wiki/Root_directory) directory (computer or external hard drive). 
+When working with the DBTCShiny application there are some limitations. The functions in the package make use of several external resources and programs. The programs do not work well when there is white space in the naming conventions of files and directories. As such it is recommended that when using DBTCShiny, working files and folders be as close to the [root](https://en.wikipedia.org/wiki/Root_directory) directory (computer or external hard drive). 
 
-Also, special characters should be avoided (including question mark, number sign, exclamation mark). It is reccommended that dashes be used for separations in naming conventions while retaining underscores for use as information deliminters (this is how DBTC functions use underscore). 
+Also, when using DBTC functions naming conventions need to carefully considered. Special characters should be avoided (including question mark, number sign, exclamation mark). It is recommended that dashes be used for separations in naming conventions while retaining underscores for use as information delimiters (this is how DBTC functions use underscore). 
 
 There are several key character strings used in the DBTC pipeline, the presence of these strings in file or folder names will cause errors when running DBTC functions. 
 The following strings are those used in DBTC and should not be used in file or folder naming:
@@ -114,11 +114,11 @@ Once initiated a window will appear in your computers default web browser with t
 
 There are several expandable panels on the initial page that can be explored for more information on installation, dependencies, and contact for troubleshooting. 
 
-The side panel (left side of the screen) of DBTCShiny contains two options in addition to the welcome option. The first option, DBTC Tools conatins all of the main high-throughput processing functions of DBTCSHiny and this section is where we will start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny (See image below). 
+The side panel (left side of the screen) of DBTCShiny contains two options in addition to the welcome option. The first option, DBTC Tools contains all of the main high-throughput processing functions of DBTCShiny and this section is where we will start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny (See image below). 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/60310743-9135-448e-bba6-291de9b2eea3)
 
-Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window <a id="selectfiledialogwindow"></a> (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as a 'select file dialog window'). 
+Shiny applicaitons use buttons <a id="buttons"></a> to select files necessary when running analyses. These buttons will bring up a dialog window <a id="selectfiledialogwindow"></a> (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as a 'select file dialog window'). 
 
 Finally, before moving on be sure that you have the tutorial data downloaded and stored on your local machine (see here if unsure [Data](#data)).
 
@@ -126,7 +126,7 @@ Finally, before moving on be sure that you have the tutorial data downloaded and
 
 # Dada Implement
 
-DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing **runs** <a id="runs"></a> (A run is a group of results processed at the same time on the same machine representing the same molecular methods). While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
+DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing **runs** <a id="runs"></a> (A run is a group of results processed at the same time on the same machine representing the same molecular methods). While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to running our example analyses.
 
 ## General Information
 This section provides file locations, processing, and saving options for the Dada analysis of Fastq files.
@@ -167,7 +167,7 @@ Navigate to the same A-Dada folder. In this folder there are two primer files (S
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/97e9b201-fc11-4b10-b270-b8bd2c4f83b8)
 
-The format of this file can be viewed by opening it or you can see the description in the DBTCShiny ReadMe [Dada Implement Format of the Primer File](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#dada-implement) Section. The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences. Note: With your own data if you are getting poor quality matches to library sequences it could be due to the presence of primers and other indicies or tags which were not properly removed from the sequence data and the contents of this file should be considered in these cases.
+The format of this file can be viewed by opening it or you can see the description in the DBTCShiny ReadMe [Dada Implement Format of the Primer File](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#dada-implement) section. The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences. The contents of this file should only include AGCT nucleotides and not any other [IUPAC codes](https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry#Amino_acid_and_nucleotide_base_codes). If there is degenerency in the primers which are represented by IUPAC codes, then these primers need to be represented by multiple primer options in the table only containing AGCT nucleotides. Note: With your own data if you are getting poor quality matches to database sequences it could be due to the presence of primers and other indices or tags which were not properly removed from the sequence data and the contents of this file should be considered in these cases.
 
 ([Back to Top](#table-of-contents))
 
@@ -207,11 +207,11 @@ These results will be generated for the initial fastq files and the cleaned and 
 ## Pattern Trim
 
 ### Maximum number of Mismatches
-This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim primers and other artifical nucleotide sequence data at the end of reads. 
+This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim primers and other artificial nucleotide sequence data at the end of reads. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/ef2b8d31-7a09-4951-bb99-b037cbcee0ae)
 
-The default for this field is 2 which will allow up to two mismatched nucleotides between primer sequences and experimental reads. If there are very large primer regions then increasing this value could be considered, but for the purposes of **this tutorial the default value of 2 will be used.**
+The default for this field is 2 which will allow up to two mismatched nucleotides between primer sequences and experimental reads. If there are larger primer regions then increasing this value could be considered. For example with the average primer region of 20 then the default 2 for this value would be appropriate. However, if the primer region were 30 nucleotides long then a value of 3 could be used here. For the purposes of **this tutorial the default value of 2 will be used.**
 
 ([Back to Top](#table-of-contents))
 
@@ -322,7 +322,7 @@ The dadaSummaryTable contains descriptive data about all of the fastq files proc
 
 **Error Assessment Visualizations** 
 
-The Dada analysis will assess the fastq files for likely instances of nucleotide errors. These data are represented visually in the 'ErrorForward' and 'ErrorReverse' pdf files. The intrepretation of these data are well covered [here](https://benjjneb.github.io/dada2/tutorial.html).
+The Dada analysis will assess the fastq files for likely instances of nucleotide errors. These data are represented visually in the 'ErrorForward' and 'ErrorReverse' pdf files. The interpretation of these data are well covered [here](https://benjjneb.github.io/dada2/tutorial.html).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/c23fd216-b091-4871-826e-6bb09e08711b)
 
@@ -339,7 +339,13 @@ The format of the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant
 
 **TotalTable**
 
-The total table provides the same format as the paired [ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant) and [Fasta](https://en.wikipedia.org/wiki/FASTA_format) main output files. However, all of the data are combined and retained in this output file. Resluts in this file could include Merged, Forward, Reverse, and ChimRemoved qualifiers in the Results column. The Merged, Forward, and Reverse indicate from which analysis the reads were obtained. The ChimRemoved identifier indicates that the dada analysis did not place the associated read in the paired ASV-fasta files as they were assessed as a [chimera](https://en.wikipedia.org/wiki/Chimera_(molecular_biology)) sequencing error.
+The total table provides the same format as the paired [ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant) and [Fasta](https://en.wikipedia.org/wiki/FASTA_format) main output files. However, all of the data are combined and retained in this output file. Results in this file could include Merged, Forward, Reverse, and ChimRemoved qualifiers in the Results column. The Merged, Forward, and Reverse indicate from which analysis the reads were obtained. The ChimRemoved identifier indicates that the dada analysis did not place the associated read in the paired ASV-fasta files as they were assessed as a [chimera](https://en.wikipedia.org/wiki/Chimera_(molecular_biology)) sequencing error.
+
+
+INCLUDE AN IMAGE OF THE TOTAL TABLE HERE
+
+
+
 
 ## Next Step Data Files
 
@@ -448,7 +454,7 @@ The 'Select the NCBI Taxon Database File' button for this function will open a t
 
 The first fillable field accepts a numeric value indicating the total number of computer cores to utilize when running the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. If using multiple cores in your analysis please ensure you do not utilize all available cores as there is a need to retain computational capacity for the operating system and R.  **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
 
-There are then five fillable fields that when changed can alter the results for the taxonomic assignment output files. The first of these two fields contain the nucleotide sequence coverage and identity threshold values. These values represent percentages out of 100 and are in whole numbers for ease of reporting in the output files. The coverage and identity (ident) values are used to filter the BLAST results where only query to library records with higher values then assigned will be used to assess the 'Lowest_Single_Rank_Above_Thres' and 'Lowest_Single_Taxa_Above_Thres' values in the output ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table (See below for an image of the output table structure and see [here for explainations of the data columns](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment-intrepretation)).  
+There are then five fillable fields that when changed can alter the results for the taxonomic assignment output files. The first of these two fields contain the nucleotide sequence coverage and identity threshold values. These values represent percentages out of 100 and are in whole numbers for ease of reporting in the output files. The coverage and identity (ident) values are used to filter the BLAST results where only query to database records with higher values then assigned will be used to assess the 'Lowest_Single_Rank_Above_Thres' and 'Lowest_Single_Taxa_Above_Thres' values in the output ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table (See below for an image of the output table structure and see [here for explainations of the data columns](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment-interpretation)).  
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/4b1dc0b8-8473-4d04-993f-5a3cdc98e18d)
 
