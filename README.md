@@ -6,9 +6,9 @@ A step-by-step example on the use of the DBTCShiny package.
 This repository contains the files and instructions to use the DBTCShiny package [rgyoung6/DBTCShiny](https://github.com/rgyoung6/DBTCShiny). The DBTC functions have four main outcomes...
 
   - [Fastq](https://en.wikipedia.org/wiki/FASTQ_format) file processing using Dada in R
-  - Using the Basic Local Alignment Search Tool ([BLAST](https://en.wikipedia.org/wiki/BLAST_(biotechnology))) amplicon sequence variants ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) can be searched against local NCBI or custom libraries
+  - Using the Basic Local Alignment Search Tool ([BLAST](https://en.wikipedia.org/wiki/BLAST_(biotechnology))) amplicon sequence variants ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) can be searched against local NCBI or custom sequence databases
   - Assign taxa to the unique reads using NCBI taxon database through taxa names and/or taxaID's
-  - Condense the resulting ASV taxonomic assignment tables to unique taxa with the ability to combine datasets (using different sequence libraries for the same reads, or results from the same samples for different molecular regions) into a combined results table
+  - Condense the resulting ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) taxonomic assignment tables to unique taxa with the ability to combine datasets (using different sequence databases for the same reads, or results from the same samples for different molecular regions) into a combined results table
 
 Before using these files and working through this tutorial please install the [DBTCShiny](https://github.com/rgyoung6/DBTCShiny) package.
 
@@ -81,9 +81,9 @@ Once complete the program should be usable (Note: the process to indicate that t
 
 # Initial Considerations
 
-When working with the DBTCShiny applicaiton there are some limitations. The functions in the package make use of several external resources and programs. The programs do not work well when there is white space in the naming conventions of files and directories. As such it is reccommended that when using DBTCShiny, working files and folders be as close to the [root](https://en.wikipedia.org/wiki/Root_directory) directory (computer or external hard drive). 
+When working with the DBTCShiny application there are some limitations. The functions in the package make use of several external resources and programs. The programs do not work well when there is white space in the naming conventions of files and directories. As such it is recommended that when using DBTCShiny, working files and folders be as close to the [root](https://en.wikipedia.org/wiki/Root_directory) directory (computer or external hard drive). 
 
-Also, special characters should be avoided (including question mark, number sign, exclamation mark). It is reccommended that dashes be used for separations in naming conventions while retaining underscores for use as information deliminters (this is how DBTC functions use underscore). 
+Also, when using DBTC functions naming conventions need to carefully considered. Special characters should be avoided (including question mark, number sign, exclamation mark). It is recommended that dashes be used for separations in naming conventions while retaining underscores for use as information delimiters (this is how DBTC functions use underscore). 
 
 There are several key character strings used in the DBTC pipeline, the presence of these strings in file or folder names will cause errors when running DBTC functions. 
 The following strings are those used in DBTC and should not be used in file or folder naming:
@@ -114,11 +114,11 @@ Once initiated a window will appear in your computers default web browser with t
 
 There are several expandable panels on the initial page that can be explored for more information on installation, dependencies, and contact for troubleshooting. 
 
-The side panel (left side of the screen) of DBTCShiny contains two options in addition to the welcome option. The first option, DBTC Tools conatins all of the main high-throughput processing functions of DBTCSHiny and this section is where we will start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny (See image below). 
+The side panel (left side of the screen) of DBTCShiny contains two options in addition to the welcome option. The first option, DBTC Tools contains all of the main high-throughput processing functions of DBTCShiny and this section is where we will start. Once DBTC Tools is clicked it will show a page with the 8 tabs for the main functions of DBTCShiny (See image below). 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/60310743-9135-448e-bba6-291de9b2eea3)
 
-Shiny applicaiton uses <a id="buttons"></a> to select files necessary when running analyses. The buttons will bring up a dialog window <a id="selectfiledialogwindow"></a> (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as a 'select file dialog window'). 
+Shiny applicaitons use buttons <a id="buttons"></a> to select files necessary when running analyses. These buttons will bring up a dialog window <a id="selectfiledialogwindow"></a> (referred to as an 'Open' dialog in Mac OS or an 'Open File' dialog in Windows and a 'File Picker' dialog in Linux and referred throughout this tutorial as a 'select file dialog window'). 
 
 Finally, before moving on be sure that you have the tutorial data downloaded and stored on your local machine (see here if unsure [Data](#data)).
 
@@ -126,7 +126,7 @@ Finally, before moving on be sure that you have the tutorial data downloaded and
 
 # Dada Implement
 
-DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing **runs** <a id="runs"></a> (A run is a group of results processed at the same time on the same machine representing the same molecular methods). While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to runnig our example analyses.
+DBTCShiny uses [dada2](https://benjjneb.github.io/dada2/) to complete the analysis of raw fastq files generated from high-throughput sequencing **runs** <a id="runs"></a> (A run is a group of results processed at the same time on the same machine representing the same molecular methods). While this tutorial will cover some of the settings when implementing dada2, for more details on the specifics of available settings please read through the [dada2](https://benjjneb.github.io/dada2/) documentation. There are five sections within the DBTCShiny Dada submission. We will reference each section in turn below with respect to running our example analyses.
 
 ## General Information
 This section provides file locations, processing, and saving options for the Dada analysis of Fastq files.
@@ -167,7 +167,7 @@ Navigate to the same A-Dada folder. In this folder there are two primer files (S
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/97e9b201-fc11-4b10-b270-b8bd2c4f83b8)
 
-The format of this file can be viewed by opening it or you can see the description in the DBTCShiny ReadMe [Dada Implement Format of the Primer File](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#dada-implement) Section. The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences. Note: With your own data if you are getting poor quality matches to library sequences it could be due to the presence of primers and other indicies or tags which were not properly removed from the sequence data and the contents of this file should be considered in these cases.
+The format of this file can be viewed by opening it or you can see the description in the DBTCShiny ReadMe [Dada Implement Format of the Primer File](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#dada-implement) section. The data in this file will be used with the R ShortRead package and the trimLRPatterns() function to remove primers by pattern matching from the ends of the sequences. The contents of this file should only include AGCT nucleotides and not any other [IUPAC codes](https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry#Amino_acid_and_nucleotide_base_codes). If there is degenerency in the primers which are represented by IUPAC codes, then these primers need to be represented by multiple primer options in the table only containing AGCT nucleotides. Note: With your own data if you are getting poor quality matches to database sequences it could be due to the presence of primers and other indices or tags which were not properly removed from the sequence data and the contents of this file should be considered in these cases.
 
 ([Back to Top](#table-of-contents))
 
@@ -207,11 +207,11 @@ These results will be generated for the initial fastq files and the cleaned and 
 ## Pattern Trim
 
 ### Maximum number of Mismatches
-This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim primers and other artifical nucleotide sequence data at the end of reads. 
+This section has a single field that accepts numeric input. This value is used by the ShortRead trimLRPatterns() pattern matching function when pattern matching to trim primers and other artificial nucleotide sequence data at the end of reads. 
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/ef2b8d31-7a09-4951-bb99-b037cbcee0ae)
 
-The default for this field is 2 which will allow up to two mismatched nucleotides between primer sequences and experimental reads. If there are very large primer regions then increasing this value could be considered, but for the purposes of **this tutorial the default value of 2 will be used.**
+The default for this field is 2 which will allow up to two mismatched nucleotides between primer sequences and experimental reads. If there are larger primer regions then increasing this value could be considered. For example with the average primer region of 20 then the default 2 for this value would be appropriate. However, if the primer region were 30 nucleotides long then a value of 3 could be used here. For the purposes of **this tutorial the default value of 2 will be used.**
 
 ([Back to Top](#table-of-contents))
 
@@ -322,15 +322,15 @@ The dadaSummaryTable contains descriptive data about all of the fastq files proc
 
 **Error Assessment Visualizations** 
 
-The Dada analysis will assess the fastq files for likely instances of nucleotide errors. These data are represented visually in the 'ErrorForward' and 'ErrorReverse' pdf files. The intrepretation of these data are well covered [here](https://benjjneb.github.io/dada2/tutorial.html).
+The Dada analysis will assess the fastq files for likely instances of nucleotide errors. These data are represented visually in the 'ErrorForward' and 'ErrorReverse' pdf files. The interpretation of these data are well covered [here](https://benjjneb.github.io/dada2/tutorial.html).
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/c23fd216-b091-4871-826e-6bb09e08711b)
 
-**Run ASV Tables and Paired Fasta Files**
+<a id="asvfasta"></a> **Run ASV Tables and Paired Fasta Files**
 
 The main output from the dada analysis are the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant). files and their associated [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files. There are three potential paired ASV-fasta files, Merged, Forward, and Reverse. As we only selected to run the [Merged](#directional-processing) analysis, **only the merged files are present for this tutorial example**.
 
-The format of the ASV files are tables which, at their most basic, include the sequence reads obtained through the analysis and the associated number of those reads for each sample analysed. For the DBTCShiny output, there are several other data that are included in the ASV output tables.
+The format of the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) files are tables which, at their most basic, include the sequence reads obtained through the analysis and the associated number of those reads for each sample analysed. For the DBTCShiny output, there are several other data that are included in the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) output tables.
 - UniqueID - A unique identifier assigned to the read
 - Length - the length of the read in number of nucleotides
 - Results - The analysis where the results were obtained (this tutorial example will indicated Merged).
@@ -339,7 +339,13 @@ The format of the ASV files are tables which, at their most basic, include the s
 
 **TotalTable**
 
-The total table provides the same format as the paired ASV and fasta <a id="asvfasta"></a> main output files. However, all of the data are combined and retained in this output file. Resluts in this file could include Merged, Forward, Reverse, and ChimRemoved qualifiers in the Results column. The Merged, Forward, and Reverse indicate from which analysis the reads were obtained. The ChimRemoved identifier indicates that the dada analysis did not place the associated read in the paired ASV-fasta files as they were assessed as a [chimera](https://en.wikipedia.org/wiki/Chimera_(molecular_biology)) sequencing error.
+The total table provides the same format as the paired [ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant) and [Fasta](https://en.wikipedia.org/wiki/FASTA_format) main output files. However, all of the data are combined and retained in this output file. Results in this file could include Merged, Forward, Reverse, and ChimRemoved qualifiers in the Results column. The Merged, Forward, and Reverse indicate from which analysis the reads were obtained. The ChimRemoved identifier indicates that the dada analysis did not place the associated read in the paired ASV-fasta files as they were assessed as a [chimera](https://en.wikipedia.org/wiki/Chimera_(molecular_biology)) sequencing error.
+
+
+INCLUDE AN IMAGE OF THE TOTAL TABLE HERE
+
+
+
 
 ## Next Step Data Files
 
@@ -351,7 +357,7 @@ Most of the files generated by the [dada_implement()](https://github.com/rgyoung
 
 # Combine Dada Output
 
-The output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function includes the [paired ASV-fasta](#asvfasta) data files. Where more than one sequence [run](#runs) has been completed for a given project, it is often helpful or needed to combine the data from the different runs into a single data file for further analysis (Note: the files being combined should be from the same molecular protocols). Only the ASV files are required for this combine output function. For the purposes of **this tutorial we are using the 'Run1_Merge.tsv' and the 'Run2_Merge.tsv' files** from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) output. To select these files simply click the 'Select a File in the Target Folder' button and then a [select file dialog window](#selectfiledialogwindow) will open. Navigate to the B-CombineDada folder and then select one of the files in this folder and the function will process all '_Merge.tsv',  '_MergeFwdRev.tsv', and '_Forward.tsv' files into paired ASV-fasta files.
+The output from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) function includes the [paired ASV-fasta](#asvfasta) data files. Where more than one sequence [run](#runs) has been completed for a given project, it is often helpful or needed to combine the data from the different runs into a single data file for further analysis (Note: the files being combined should be from the same molecular protocols). Only the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) files are required for this combine output function. For the purposes of **this tutorial we are using the 'Run1_Merge.tsv' and the 'Run2_Merge.tsv' files** from the [dada_implement()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#dada-implement) output. To select these files simply click the 'Select a File in the Target Folder' button and then a [select file dialog window](#selectfiledialogwindow) will open. Navigate to the B-CombineDada folder and then select one of the files in this folder and the function will process all '_Merge.tsv',  '_MergeFwdRev.tsv', and '_Forward.tsv' files into paired ASV-fasta files.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b4b331c4-0fed-4e63-99cf-e82b9e304d85)
 
@@ -367,7 +373,7 @@ There are no data files from previous DBTCShiny elements that lead into the  [ma
 
 - The MACER fasta header format - ```>UniqueID|OtherInformation|Genus|species|OtherInformation|Marker```
 
-The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) shiny page has five elements. The first element is the 'Fasta File' selection button. Once clicked this button will again bring up a [select file dialog window](#selectfiledialogwindow) window.  
+The [make_BLAST_DB()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#make-blast-db) shiny page has five elements. The first element is the 'Fasta File' selection button. Once clicked this button will again bring up a [select file dialog window](#selectfiledialogwindow).  
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/08dabbcc-695e-4eb9-92ef-28bb0c86aded)
 
@@ -379,7 +385,7 @@ The next element is the 'makeblastdb Location' button. If this button is not sel
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/104e5610-dc4b-4bf3-bfc6-60b1370d4acc)
 
-For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [select file dialog window](#selectfiledialogwindow), but remember to ensure the program files have [permissions](#Permissions)
+For ease, this tutorial includes a version of the program for three platforms (NOTE: these programs are not updated regularly and may not be the most recent versions). To utilize these program files select them in the [select file dialog window](#selectfiledialogwindow), but remember to ensure the program files have [permissions](#Permissions).
 
 The 'Select the NCBI Taxon Database File' button for this function will open a third [select file dialog window](#selectfiledialogwindow) where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results)).
 
@@ -389,9 +395,9 @@ There are then two fillable fields required for the final elements of the [make_
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/3da9d910-7bab-4aad-9a26-325f956a1866)
 
-The first fillable field is the minimum length of the sequence (in nucleotides) for records that will be included in the constructed database.  
+The first fillable field is the minimum length of the sequence (in nucleotides) for records that will be included in the constructed database. **For this tutorial the default of 100 is used.**
 
-The second fillable field accepts alpha numeric values. This field should be filled with a short (2 to 10 character) string as a unique identifier for the database you are going to construct. 
+The second fillable field accepts alpha numeric values. This field should be filled with a short (2 to 10 character) string as a unique identifier for the database you are going to construct. As this tutorial doesn't rely on the previous steps, and descriptive naming can be used here. **It is suggested that 'SOCTUT' would work well for this tutorial.**
 
 Finally using the 'Create BLAST Database Submit' button will initiate the program. 
 
@@ -401,9 +407,11 @@ Finally using the 'Create BLAST Database Submit' button will initiate the progra
 
 The [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function has three buttons and three fillable fields. 
 
+**NOTE:** While the DBTCShiny package has been built for the analysis of high-thoughput sequencing results, the BLAST and taxonomic assignment, taxonomic condense, and mapping functions can be utilized with single specimen Sanger sequencing data.
+
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/2284eb81-552c-408b-9f64-6473c81d6644)
 
-The 'Database File' button will launch a [select file dialog window](#selectfiledialogwindow). Using this window, the user is required to select a file inside a constructed BLAST formatted database (See image below of files contained in a BLAST formatted database). Any one of the files in this database can be selected.
+The 'Database File' button will launch a [select file dialog window](#selectfiledialogwindow). Using this window, the user is required to select a file inside a constructed BLAST formatted database (See image below of files contained in a BLAST formatted database). **Any one of the files in the BLAST formatted database folder can selected**.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6b4187b7-7a02-43cb-bda2-0f17a4814ab4)
 
@@ -411,33 +419,101 @@ The next element is the 'BLASTn Location' button. If this button is not selected
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9e910efe-2826-4a1a-aaa6-aa7e136b8670)
 
-The final button is the Query Fasta File button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where 
+The final button is the 'Query Fasta File' button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where the user will need to select a [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file of interest to BLAST against the selected database. **For this tutorial the user should select the 2024_02_14_0409_combineDada.fas file.** (See image below). 
 
-
+**NOTE:** In this tutorial example there is a single [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file in the 'D-BLAST' folder. However, the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function will process all [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files in the selected location BLASTing them against the indicated BLAST database. Also, if this fasta has [paired ASV-fasta](#asvfasta) data, this will be recombined with the BLAST results using the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment) function.
 
 ![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/80332e21-c574-4de0-8f91-3e7a79a874a4)
 
+There are three fillable fields wih arguments for this function (See image below). The first fillable field accepts a numerical input. This value indicates the maximum number of returned results that will be saved to the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) output file In cases where there is a small BLAST formatted database the results will not reach the maximum indicated here. However, it is more than likely that all sequences queried against very large databases, such as the NCBI GenBank nucleotide database, will all have the maximum number of returned results. **For this tutorial we will use the default of 200 as our BLAST database is small with known clean data records so this value will easily saturate the results with matches to high quality data.**
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/58e22af1-889e-4273-bf73-fd838d0c19ff)
+
+The second fillable field also accepts a numeric value for the minimum length of sequence used in the submitted [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file to BLAST against the indicated database (Note: the smaller the length the more computationally demanding the BLAST). This value is usually set to a known value close to the expected fragement size of the data submitted to the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function. **For this tutorial we will use the default value of 100.**
+
+Finally, the third fillable field also accepts a numeric value indicating the total number of computer cores to utilize when running the [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. If using multiple cores in your analysis please ensure you do not utilize all available cores as there is a need to retain computational capacity for the operating system and R. **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [seq_BLAST](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#sequence-blast) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
 
 ([Back to Top](#table-of-contents))
 
 
 # Taxon Assign
 
-([Back to Top](#table-of-contents))
+The [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function has two button [select file dialog window](#selectfiledialogwindow) elements, six fillable fields, and one TRUE/FALSE selection. 
 
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/9a7f9c64-f4e1-44b9-999c-a361604fd119)
+
+The [taxon_assign()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#taxon-assignment) function processes BLAST results with paired fasta files. If [paired ASV-fasta](#asvfasta) files are availble in the same location as the '_BLAST' and [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files, these ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) data will be combined with the taxonomic assignment results from the BLAST and fasta files. 
+
+The first button is the 'Select a file in the location of BLAST and Fasta file' button. This will again bring up a [select file dialog window](#selectfiledialogwindow) where the user will need to select a file in the location where the BLAST and paired [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file are located. **For this tutorial the user should select the any of the files in the E-TaxaAssign folder.** (See image below). 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/48c6a639-3256-431a-95de-00239a5b8c6b)
+
+**NOTE:** In this tutorial example there are two BLAST results representing the same data and two differetn  paired with a single [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file in the 'E-TaxaAssign' folder. However, the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function will process all BLAST files present if there are paired [Fasta](https://en.wikipedia.org/wiki/FASTA_format) files in the selected location (and will combine the BLAST results with the [paired ASV-fasta](#asvfasta) [Fasta](https://en.wikipedia.org/wiki/FASTA_format) file.
+
+The 'Select the NCBI Taxon Database File' button for this function will open a third [select file dialog window](#selectfiledialogwindow) where you will need to select the 'accessionTaxa.sql' data file ([See the accessionTaxa instructions](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#create-a-local-ncbi-taxonomy-database-to-assign-taxonomic-identifications-to-blast-results)).
+
+The first fillable field accepts a numeric value indicating the total number of computer cores to utilize when running the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. If using multiple cores in your analysis please ensure you do not utilize all available cores as there is a need to retain computational capacity for the operating system and R.  **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
+
+There are then five fillable fields that when changed can alter the results for the taxonomic assignment output files. The first of these two fields contain the nucleotide sequence coverage and identity threshold values. These values represent percentages out of 100 and are in whole numbers for ease of reporting in the output files. The coverage and identity (ident) values are used to filter the BLAST results where only query to database records with higher values then assigned will be used to assess the 'Lowest_Single_Rank_Above_Thres' and 'Lowest_Single_Taxa_Above_Thres' values in the output ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table (See below for an image of the output table structure and see [here for explainations of the data columns](https://github.com/rgyoung6/DBTCShiny/blob/main/README.md#taxon-assignment-interpretation)).  
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/4b1dc0b8-8473-4d04-993f-5a3cdc98e18d)
+
+The next fillable field accepts a numeric input with values between 0 and 1. The 'propThres' value looks at the taxonomic rank directly below the assessed rank indicated in the 'Final_Rank' and 'Final_Taxa' columns. If the results from the BLAST at the lower taxonomic level had more than the 'propThres' percentage of results in agreement to the 'Final_Taxa' at the 'Final_Rank' but not all were in agreement, then the record in question would be flagged so that the researcher can evaluate the records making up the results at the rank below the assigned rank. This flag would appear in the 'Result_Code' section and would show 'TBAT(0.95)'.
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/b71b1d48-10f3-46d3-ab74-4c2cb0aaa219)
+
+In the data for this tutorial there was an example of this which is highlighted below...
+
+| genus | species | 
+| --------------- | --------------- | 
+| Mordellaria(25,96,97.19,0)  | Mordellaria borealis(1,96,99.75,0), Mordellaria serval(24,96,97.19,0)    | 
+
+In this example from the ST BLAST formatted database the tutorial results will show a TBAT(0.95) flag present in the 'Result_Code' column in the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) '_taxaAssign' output file. This flag would be present as the taxonomic assignment of the genus _Mordellaria_, while accurate, was based on results at the species level with two species assignments. However, there was only a single record indicating _Mordellaria borealis_ representing 4% of the returned results meaning that _Mordellaria serval_ represented over the set 'propThres' of 95% which resulted in the flag to inform the researcher that this could be a result needing further consideration. **For the purposes of this tutorial we will use the default value of 0.95.**
+
+The next two fillable fields, 'coverReportThresh' and the 'identReportThresh', accept numeric input between 1 and 100.  These fields look at the final assessed taxonomic result and place flags into the 'Result_Code' column if the final coverage and identity records that fall below the 'coverReportThresh' and the 'identReportThresh' respectively. The flags populating the 'Result_Code' column are BIRT(identReportThresh) indicating that the final taxa result is below the identity reporting threshold and BCRT(coverReportThresh) where the final taxa result is below the nucleotide coverage reporting threshold. **For this tutorial we will use the default values of 95 for both the 'coverReportThresh' and the 'identReportThresh'.**
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/0e5eb50f-1790-4349-976e-fa2249078aa1)
+
+There are instances where the BLAST does not yeild results for the submitted nucleotide sequence (This is a function of the BLAST algorithm and the default set reporting threshold of an e-value of 10 or greater [(see here for details)](https://blast.ncbi.nlm.nih.gov/doc/blast-topics/blastsearchparams.html). The final 'includeAllDada' TRUE/FALSE selection will, if set to TRUE, populate the final table with records that failed to obtain a BLAST match to the database and instead of taxonomic hierarchy will place NA in the ranks sections. If this is set to FALSE then only records that had at least a 'superkingdom' assignment will be included. **For the purposes of this tutorial will use the TRUE selection and include all records in the output, with or without BLAST matches. However, it is recommended that the user experiment with both options.**
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/27ed8314-69bf-49ec-b9fb-3ab6bd5fc572)
+
+The final 'Taxon Assign Submit' button will then initiate the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function.
+
+([Back to Top](#table-of-contents))
 
 # Combine Taxa Assign
 
+The [combine_assign_output()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#combine-assignment-output) function takes multiple outputs from the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function representing the same data but with differing taxonomic assignment files that were generated using different BLAST databases and combines them into a single file. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/6cf3295d-ec1f-4164-aae6-f91339c3f353)
+
+The 'Taxa Assign File' button opens a [select file dialog window](#selectfiledialogwindow) where the user will **navigate to the 'F-CombineTaxaAssign' folder and select one of the '_taxaAssign' files in this location**. This function will combine all '_taxaAssign' files in this location into a combined file. The user will need to ensure that all of the same files in this location represent the same root name and underlying data but with BLAST data from a different database. If there are multiple '_taxaAssign' files for multiple root names (meaning stemming from different initial datasets), this function will attempt to combine them which is **NOT** a desired outcome. 
+
+The only fillable field accepts a numeric value indicating the total number of computer cores to utilize when running the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. If using multiple cores in your analysis please ensure you do not utilize all available cores as there is a need to retain computational capacity for the operating system and R.  **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
+
+Finally, the click the 'Combine Taxa Assign' button to start the function. The output from the [combine_assign_output()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#combine-assignment-output) function is a single '_taxaAssignCombine' file ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) file and a text file with the details of the running of the function. Note: There can be only one set of '_taxaAssign' files in the selected location meaning all files stem from the same root files and have the same root name.
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/33300b82-ebe3-4cd3-a726-9e220ba6c7bc)
+
 ([Back to Top](#table-of-contents))
 
-
-
 # Reduce Taxa Assign
+
+The [reduce_taxa()](https://github.com/rgyoung6/DBTCShiny/tree/main?tab=readme-ov-file#reduce-taxa) function will take '_taxaAssignCombine' or '_taxaAssign' files and reduce the taxonomic assignments so that there is a single unique taxa listed. This function works per file and produces a sister '_taxaReduced' file to every '_taxaAssignCombine' or '_taxaAssign' file present in the selected directory. This is essentially taking the ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table and creating a taxonomic table. 
+
+![image](https://github.com/rgyoung6/DBTCShinyTutorial/assets/60077841/410995b4-79f6-4878-9e95-d5ca74888719)
+
+There are two fields for this function. The first is the 'Taxa Assign File Location' button that opens a [select file dialog window](#selectfiledialogwindow). Navigate to the location with your files of interest, **in the case of this tutorial select the 'G-ReduceTaxa' folder and select any file at this location. **
+
+The second field accepts a numeric value indicating the total number of computer cores to utilize when running the [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) function. This value can be utilized on Linux and MacOS, but will automatically be set to 1 when running the function in a Windows environment. If using multiple cores in your analysis please ensure you do not utilize all available cores as there is a need to retain computational capacity for the operating system and R.  **This tutorial will use the default of 1 as the dataset and database are very small and so the running of [taxon_assign()](https://github.com/rgyoung6/DBTCShiny?tab=readme-ov-file#taxon-assignment) will proceed quickly on most recently built computer systems. However, running this function more then once testing different cores, where the operating system allows, is encouraged.**
 
 ([Back to Top](#table-of-contents))
 
 
 # Combine Reduced Taxon Assign
+
+The final central DBTCShiny function is the 
 
 ([Back to Top](#table-of-contents))
 
